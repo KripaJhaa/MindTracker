@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -46,7 +47,14 @@ const Login = () => {
   };
 
   return (
-    <div className="page-container fade-in">
+    <>
+      <SEOHead 
+        title="Login - Access Your MindTracker Account"
+        description="Sign in to your MindTracker account to access personalized mindfulness exercises, track your wellness journey, and connect with mental health mentors at your educational institution."
+        keywords="login, sign in, student account, mindfulness login, wellness platform access"
+        url="/login"
+      />
+      <div className="page-container fade-in">
       <div className="form-container" style={{ margin: '2rem auto' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>{t('welcomeBack')}</h2>
 
@@ -104,7 +112,8 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

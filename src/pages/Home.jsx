@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -77,7 +78,14 @@ const Home = () => {
   const quote = getMindfulQuote();
 
   return (
-    <div className="page-container fade-in-up" style={{
+    <>
+      <SEOHead 
+        title="Home Dashboard - Personal Mindfulness Journey"
+        description="Access your personalized mindfulness dashboard with daily meditation practices, progress tracking, guided exercises, and wellness insights tailored to your educational institution."
+        keywords="mindfulness dashboard, daily meditation, progress tracking, wellness journey, student mental health"
+        url="/home"
+      />
+      <div className="page-container fade-in-up" style={{
       background: 'var(--gradient-meditation)',
       minHeight: '100vh',
       padding: '2rem 1rem',
@@ -583,7 +591,8 @@ const Home = () => {
           }
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 };
 

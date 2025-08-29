@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Allow access to all pages
+Allow: /welcome
+Allow: /login
+Allow: /home
+Allow: /journal
+Allow: /mindfulness-exercises
+Allow: /book-mentor
+Allow: /analytics
+Allow: /growth-reports
+Allow: /settings
+Allow: /profile-setup
+
+# Block access to source files and build artifacts
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: *.map
+
+# Sitemap location
+Sitemap: https://mindtracker.vercel.app/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

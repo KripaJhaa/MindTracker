@@ -1,13 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const MindfulnessExercises = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
 
   return (
-    <div className="page-container fade-in">
+    <>
+      <SEOHead 
+        title="Mindfulness Exercises - Guided Meditation & Breathing Techniques"
+        description="Access a comprehensive library of guided mindfulness exercises including meditation, breathing techniques, body scans, and stress reduction practices designed for students and educational settings."
+        keywords="guided meditation, mindfulness exercises, breathing techniques, stress reduction, meditation library, student wellness"
+        url="/mindfulness-exercises"
+      />
+      <div className="page-container fade-in">
       <div style={{ marginBottom: '2rem' }}>
         <button
           className="btn btn-secondary"
@@ -60,7 +68,8 @@ const MindfulnessExercises = () => {
           <strong>{t('demoTimeMinutes')}</strong>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

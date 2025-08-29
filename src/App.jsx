@@ -28,34 +28,36 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <header className="app-header">
-          {isAuthenticated ? <Navigation /> : <PublicNavigation />}
-          <div className="settings-bar">
-            <ThemeToggle />
-          </div>
-        </header>
-        <main className="app-content">
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<Welcome />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            
-            {/* Protected Routes */}
-            <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-            <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
-            <Route path="/journal" element={<ProtectedRoute><Journal /></ProtectedRoute>} />
-            <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
-            <Route path="/book-mentor" element={<ProtectedRoute><BookMentor /></ProtectedRoute>} />
-            <Route path="/growth-reports" element={<ProtectedRoute><GrowthReports /></ProtectedRoute>} />
-            <Route path="/menu" element={<ProtectedRoute><MainMenu /></ProtectedRoute>} />
-            <Route path="/exercises" element={<ProtectedRoute><MindfulnessExercises /></ProtectedRoute>} />
-            <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup /></ProtectedRoute>} />
-            <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+          <header className="app-header">
+            {isAuthenticated ? <Navigation /> : <PublicNavigation />}
+            <div className="settings-bar">
+              <ThemeToggle />
+            </div>
+          </header>
+          <main className="app-content">
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<Welcome />} />
+              <Route path="/welcome" element={<Welcome />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              
+              {/* Protected Routes */}
+              <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+              <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+              <Route path="/journal" element={<ProtectedRoute><Journal /></ProtectedRoute>} />
+              <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
+              <Route path="/book-mentor" element={<ProtectedRoute><BookMentor /></ProtectedRoute>} />
+              <Route path="/growth-reports" element={<ProtectedRoute><GrowthReports /></ProtectedRoute>} />
+              <Route path="/menu" element={<ProtectedRoute><MainMenu /></ProtectedRoute>} />
+              <Route path="/mindfulness-exercises" element={<ProtectedRoute><MindfulnessExercises /></ProtectedRoute>} />
+              <Route path="/exercises" element={<ProtectedRoute><MindfulnessExercises /></ProtectedRoute>} />
+              <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup /></ProtectedRoute>} />
+              <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
   );
 }
 

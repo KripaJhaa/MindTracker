@@ -1,0 +1,34 @@
+{
+  "name": "MindTracker",
+  "short_name": "MindTracker",
+  "description": "Institutional mindfulness and wellness tracking platform for educational institutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf4f0",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["health", "education", "wellness", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

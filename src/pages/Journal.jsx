@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const Journal = () => {
   const navigate = useNavigate();
@@ -15,7 +16,14 @@ const Journal = () => {
   };
 
   return (
-    <div className="page-container fade-in">
+    <>
+      <SEOHead 
+        title="Mindful Journal - Reflection & Personal Growth"
+        description="Write and track your mindfulness journey with our secure digital journal. Reflect on your daily experiences, meditation sessions, and personal growth in a safe, private space."
+        keywords="mindful journaling, reflection, personal growth, meditation diary, wellness journal"
+        url="/journal"
+      />
+      <div className="page-container fade-in">
       <div style={{ marginBottom: '2rem' }}>
         <button
           className="btn btn-secondary"
@@ -84,7 +92,8 @@ const Journal = () => {
           <strong>{t('demoTotal')}</strong>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

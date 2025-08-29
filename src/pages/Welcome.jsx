@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEOHead from '../components/SEOHead';
 import './Welcome.css';
 
 const Welcome = () => {
@@ -48,7 +49,14 @@ const Welcome = () => {
   ];
 
   return (
-    <div className="page-container fade-in-up" style={{
+    <>
+      <SEOHead 
+        title="Welcome to MindTracker - Institutional Mindfulness Platform"
+        description="Discover MindTracker, a comprehensive mindfulness and wellness platform designed specifically for educational institutions. Featuring guided meditation, journaling, mentor sessions, and detailed analytics to support student mental health."
+        keywords="mindfulness platform, educational institutions, student wellness, guided meditation, mental health support, institutional mindfulness, wellness tracking"
+        url="/welcome"
+      />
+      <div className="page-container fade-in-up" style={{
       background: 'var(--background)',
       minHeight: '100vh',
       padding: '2rem 1rem',
@@ -464,7 +472,8 @@ const Welcome = () => {
           {t('buildingCommunitiesText')}
         </p>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

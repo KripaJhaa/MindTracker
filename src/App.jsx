@@ -1,0 +1,59 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useAuth } from './context/AuthContext';
+import Navigation from './components/Navigation';
+import PublicNavigation from './components/PublicNavigation';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import ThemeToggle from './components/ThemeToggle';
+import './App.css';
+
+// Pages
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Welcome from './pages/Welcome';
+import Settings from './pages/Settings';
+import Journal from './pages/Journal';
+import Analytics from './pages/Analytics';
+import BookMentor from './pages/BookMentor';
+import GrowthReports from './pages/GrowthReports';
+import MainMenu from './pages/MainMenu';
+import MindfulnessExercises from './pages/MindfulnessExercises';
+import ProfileSetup from './pages/ProfileSetup';
+import Notifications from './pages/Notifications';
+
+function App() {
+  const { isAuthenticated } = useAuth();
+
+  return (
+    <Router>
+      <div className="app">
+        <header className="app-header">
+          {isAuthenticated ? <Navigation /> : <PublicNavigation />}
+          <div className="settings-bar">
+            <ThemeToggle />
+          </div>
+        </header>
+        <main className="app-content">
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/login" element={<Login />} />
+            
+            {/* Protected Routes */}
+            <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+            <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+            <Route path="/journal" element={<ProtectedRoute><Journal /></ProtectedRoute>} />
+            <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
+            <Route path="/book-mentor" element={<ProtectedRoute><BookMentor /></ProtectedRoute>} />
+            <Route path="/growth-reports" element={<ProtectedRoute><GrowthReports /></ProtectedRoute>} />
+            <Route path="/menu" element={<ProtectedRoute><MainMenu /></ProtectedRoute>} />
+            <Route path="/exercises" element={<ProtectedRoute><MindfulnessExercises /></ProtectedRoute>} />
+            <Route path="/profile-setup" element={<ProtectedRoute><ProfileSetup /></ProtectedRoute>} />
+            <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

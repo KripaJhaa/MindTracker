@@ -1,0 +1,9 @@
+.theme-toggle-text {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .theme-toggle-text {
+    display: none;
+  }
+}

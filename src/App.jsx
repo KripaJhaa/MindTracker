@@ -10,6 +10,7 @@ import './App.css';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Welcome from './pages/Welcome';
 import Settings from './pages/Settings';
 import Journal from './pages/Journal';
@@ -35,8 +36,10 @@ function App() {
         </header>
         <main className="app-content">
           <Routes>
+            {/* Public Routes */}
             <Route path="/" element={<Welcome />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             
             {/* Protected Routes */}
             <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />

@@ -822,6 +822,37 @@ p {
   box-shadow: 0 4px 20px rgba(139, 123, 139, 0.12);
 }
 
+/* Ensure text inside practice items wraps and doesn't overflow */
+.practice-item h4,
+.practice-item p,
+.practice-item span {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Responsive: stack content vertically on narrow viewports to avoid overlap */
+@media (max-width: 920px) {
+  .practice-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.75rem;
+  }
+
+  .practice-item > div:first-child {
+    /* keep the emoji/icon block from shrinking */
+    margin-bottom: 0.25rem;
+  }
+
+  .meditation-card {
+    padding: 1.25rem;
+  }
+
+  .meditation-card .practice-item {
+    padding: 1rem;
+  }
+}
+
 .practice-item::after {
   content: '';
   position: absolute;
@@ -834,6 +865,23 @@ p {
   border-bottom: none;
   transform: translateY(-50%) rotate(45deg);
   transition: all 0.3s ease;
+}
+
+/* Make the content area flexible so long text wraps and doesn't push layout */
+.practice-item > h4,
+.practice-item > p {
+  flex: 1 1 auto;
+  min-width: 0; /* allow flex children to shrink properly */
+}
+
+/* Allow grid items to shrink properly inside practice-grid */
+.practice-grid > .practice-item {
+  min-width: 0;
+}
+
+/* Reduce the prominence of the ::after arrow on small screens */
+@media (max-width: 520px) {
+  .practice-item::after { display: none; }
 }
 
 .practice-item:hover::after {

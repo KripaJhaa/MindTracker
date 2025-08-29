@@ -30,7 +30,7 @@ const PublicNavigation = () => {
               cursor: 'pointer'
             }}
           >
-            <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>Mindfulness</h3>
+            <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>MindTrack</h3>
           </button>
         </div>
 
@@ -48,7 +48,7 @@ const PublicNavigation = () => {
         </button>
         <button
           className="btn"
-          onClick={() => navigate('/profile-setup')}
+          onClick={() => navigate('/signup')}
         >
           {t('signUp')}
         </button>
@@ -102,7 +102,9 @@ const PublicNavigation = () => {
 
         .nav-actions {
           display: flex;
-          gap: 1rem;
+          gap: 0.5rem;
+          flex-direction: row;
+          align-items: center;
         }
 
         @media (max-width: 768px) {

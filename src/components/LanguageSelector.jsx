@@ -6,10 +6,14 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'english', name: 'English', flag: '🇺🇸' },
-    { code: 'hindi', name: 'हिंदी', flag: '🇮🇳' },
-    { code: 'tamil', name: 'தமிழ்', flag: '🇮🇳' }
+    { code: 'english', flag: '🇺🇸' },
+    { code: 'hindi', flag: '🇮🇳' },
+    { code: 'tamil', flag: '🇮🇳' }
   ];
+
+  const getLanguageName = (code) => {
+    return t(`language${code.charAt(0).toUpperCase() + code.slice(1)}`);
+  };
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
@@ -50,7 +54,7 @@ const LanguageSelector = () => {
           }}
         >
           <span style={{ fontSize: '1rem' }}>{currentLanguage?.flag}</span>
-          <span>{currentLanguage?.name}</span>
+          <span>{getLanguageName(currentLanguage?.code)}</span>
           <span style={{
             fontSize: '0.7rem',
             marginLeft: '0.25rem',
@@ -107,7 +111,7 @@ const LanguageSelector = () => {
                 }}
               >
                 <span style={{ fontSize: '1.2rem' }}>{lang.flag}</span>
-                <span>{lang.name}</span>
+                <span>{getLanguageName(lang.code)}</span>
                 {lang.code === language && (
                   <span style={{ marginLeft: 'auto', fontSize: '0.8rem' }}>✓</span>
                 )}

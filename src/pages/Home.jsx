@@ -50,23 +50,23 @@ const Home = () => {
   const getMindfulQuote = () => {
     const quotes = [
       {
-        text: "Peace comes from within. Do not seek it without.",
-        author: "Buddha",
+        text: t('quote1Text'),
+        author: t('quote1Author'),
         emoji: "☯️"
       },
       {
-        text: "The present moment is the only moment available to us.",
-        author: "Thich Nhat Hanh",
+        text: t('quote2Text'),
+        author: t('quote2Author'),
         emoji: "🌸"
       },
       {
-        text: "Mindfulness is the miracle by which we master and restore ourselves.",
-        author: "Thich Nhat Hanh",
+        text: t('quote3Text'),
+        author: t('quote3Author'),
         emoji: "🧘"
       },
       {
-        text: "The mind is everything. What you think you become.",
-        author: "Buddha",
+        text: t('quote4Text'),
+        author: t('quote4Author'),
         emoji: "🌟"
       }
     ];
@@ -176,7 +176,7 @@ const Home = () => {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '1.5rem'
         }}
         className="practice-grid"

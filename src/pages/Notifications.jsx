@@ -18,7 +18,7 @@ const Notifications = () => {
       type: 'reminder',
       title: t('sessionReminder'),
       message: t('sessionReminderMessage'),
-      time: '2 hours ago',
+      time: t('demoTime1'),
       icon: '📅'
     },
     {
@@ -26,7 +26,7 @@ const Notifications = () => {
       type: 'suggestion',
       title: t('exerciseSuggestion'),
       message: t('exerciseSuggestionMessage'),
-      time: '5 hours ago',
+      time: t('demoTime2'),
       icon: '🧘'
     },
     {
@@ -34,7 +34,7 @@ const Notifications = () => {
       type: 'achievement',
       title: t('streakMilestone'),
       message: t('streakMilestoneMessage'),
-      time: '1 day ago',
+      time: t('demoTime3'),
       icon: '🏆'
     },
     {
@@ -42,7 +42,7 @@ const Notifications = () => {
       type: 'checkin',
       title: t('dailyCheckin'),
       message: t('dailyCheckinMessage'),
-      time: '2 days ago',
+      time: t('demoTime4'),
       icon: '😊'
     },
     {

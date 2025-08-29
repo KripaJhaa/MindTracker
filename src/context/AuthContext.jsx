@@ -17,7 +17,14 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check if user is logged in (from localStorage or API)
-    const savedUser = localStorage.getItem('mindfulness_user');
+    // Legacy key migration: if older 'mindfulness_user' exists, migrate to 'mindtrack_user'
+    const legacy = localStorage.getItem('mindfulness_user');
+    const migratedKey = 'mindtrack_user';
+    if (legacy && !localStorage.getItem(migratedKey)) {
+      localStorage.setItem(migratedKey, legacy);
+      localStorage.removeItem('mindfulness_user');
+    }
+    const savedUser = localStorage.getItem(migratedKey);
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
@@ -25,13 +32,13 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (userData) => {
-    setUser(userData);
-    localStorage.setItem('mindfulness_user', JSON.stringify(userData));
+  setUser(userData);
+  localStorage.setItem('mindtrack_user', JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('mindfulness_user');
+  localStorage.removeItem('mindtrack_user');
   };
 
   const value = {

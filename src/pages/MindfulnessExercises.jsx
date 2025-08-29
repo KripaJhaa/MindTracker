@@ -53,11 +53,11 @@ const MindfulnessExercises = () => {
         <h3>{t('recentActivity')}</h3>
         <div className="progress-item">
           <span>{t('lastCompleted')}: {t('breathingExercise')}</span>
-          <span style={{ color: 'var(--text-secondary)' }}>2 days ago</span>
+          <span style={{ color: 'var(--text-secondary)' }}>{t('demoTime4')}</span>
         </div>
         <div className="progress-item">
           <span>{t('timeSpentWeek')}</span>
-          <strong>45 minutes</strong>
+          <strong>{t('demoTimeMinutes')}</strong>
         </div>
       </div>
     </div>

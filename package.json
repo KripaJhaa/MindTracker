@@ -1,13 +1,17 @@
 {
-  "name": "new",
+  "name": "mindtracker",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A mindfulness and wellness tracking platform for educational institutions",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && vercel --prod",
+    "deploy:preview": "npm run build && vercel",
+    "verify": "./verify-deployment.sh"
   },
   "dependencies": {
     "react": "^19.1.1",

@@ -73,15 +73,15 @@ const Journal = () => {
         <h3>{t('journalHistory')}</h3>
         <div className="progress-item">
           <span>{t('entriesThisWeek')}</span>
-          <strong>4</strong>
+          <strong>{t('demoEntries')}</strong>
         </div>
         <div className="progress-item">
           <span>{t('longestStreak')}</span>
-          <strong>12 days</strong>
+          <strong>{t('demoStreak')}</strong>
         </div>
         <div className="progress-item">
           <span>{t('totalEntries')}</span>
-          <strong>28</strong>
+          <strong>{t('demoTotal')}</strong>
         </div>
       </div>
     </div>

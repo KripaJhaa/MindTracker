@@ -243,7 +243,7 @@ const GrowthReports = () => {
             <span style={{ fontSize: '1.5rem' }}>🎯</span>
             <div>
               <strong>First Week Complete</strong>
-              <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Completed 7 days of mindfulness practice</p>
+              <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Completed 7 days of MindTrack practice</p>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', backgroundColor: 'var(--surface)', borderRadius: 'var(--border-radius)', marginBottom: '0.5rem' }}>

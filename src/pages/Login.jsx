@@ -51,11 +51,11 @@ const Login = () => {
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>{t('welcomeBack')}</h2>
 
         <div style={{ marginBottom: '2rem', padding: '1rem', background: 'var(--background)', borderRadius: 'var(--border-radius)', border: '1px solid var(--border)' }}>
-          <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)' }}>Demo Credentials:</h4>
+          <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)' }}>{t('demoCredentialsTitle')}</h4>
           <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
-            <p><strong>Student:</strong> student@demo.com / password</p>
-            <p><strong>Mentor:</strong> mentor@demo.com / password</p>
-            <p><strong>Admin:</strong> admin@demo.com / password</p>
+            <p><strong>{t('studentCredential')}</strong> student@demo.com / password</p>
+            <p><strong>{t('mentorCredential')}</strong> mentor@demo.com / password</p>
+            <p><strong>{t('adminCredential')}</strong> admin@demo.com / password</p>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ const Login = () => {
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {t('noAccount')} <button
               className="btn-link"
-              onClick={() => navigate('/profile-setup')}
+              onClick={() => navigate('/signup')}
             >
               {t('signUp')}
             </button>

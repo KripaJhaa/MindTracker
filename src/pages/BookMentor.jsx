@@ -15,30 +15,30 @@ const BookMentor = () => {
   const sessions = [
     {
       id: 1,
-      student: 'Alice Johnson',
-      mentor: 'Dr. Sarah Wilson',
+      student: t('demoStudent1'),
+      mentor: t('demoMentor1'),
       date: '2025-08-28',
       time: '10:00 AM',
       status: 'scheduled',
-      topic: 'Stress Management'
+      topic: t('demoTopic1')
     },
     {
       id: 2,
-      student: 'Bob Smith',
-      mentor: 'Dr. Michael Brown',
+      student: t('demoStudent2'),
+      mentor: t('demoMentor2'),
       date: '2025-08-28',
       time: '2:00 PM',
       status: 'completed',
-      topic: 'Anxiety Reduction'
+      topic: t('demoTopic2')
     },
     {
       id: 3,
-      student: 'Carol Davis',
-      mentor: 'Dr. Sarah Wilson',
+      student: t('demoStudent3'),
+      mentor: t('demoMentor1'),
       date: '2025-08-29',
       time: '11:00 AM',
       status: 'scheduled',
-      topic: 'Mindfulness Practice'
+      topic: t('demoTopic3')
     }
   ];
 
@@ -345,7 +345,7 @@ const BookMentor = () => {
                 <div className="mentor-card">
                   <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>👨‍⚕️</div>
                   <div style={{ fontWeight: 'bold' }}>Dr. Michael Brown</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Mindfulness Coach</div>
+                  <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>MindTrack Coach</div>
                   <div style={{ fontSize: '0.875rem', color: 'var(--success)' }}>Available</div>
                 </div>
                 <div className="mentor-card">

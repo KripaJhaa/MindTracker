@@ -21,12 +21,12 @@ const ProfileSetup = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      setError(t('passwordsDoNotMatch'));
       return;
     }
 
     if (!password || password.length < 6) {
-      setError('Password must be at least 6 characters long');
+      setError(t('passwordMinLength'));
       return;
     }
 
@@ -52,12 +52,12 @@ const ProfileSetup = () => {
       case 'student':
         return (
           <div className="form-group">
-            <label className="form-label" htmlFor="ageGrade">Age/Grade</label>
+            <label className="form-label" htmlFor="ageGrade">{t('ageGrade')}</label>
             <input
               id="ageGrade"
               type="text"
               className="form-input"
-              placeholder="Enter your age or grade (e.g., 16 or Grade 11)"
+              placeholder={t('ageGradePlaceholder')}
               value={ageGrade}
               onChange={e => setAgeGrade(e.target.value)}
               required
@@ -67,11 +67,11 @@ const ProfileSetup = () => {
       case 'mentor':
         return (
           <div className="form-group">
-            <label className="form-label" htmlFor="preferences">Specialization</label>
+            <label className="form-label" htmlFor="preferences">{t('specialization')}</label>
             <textarea
               id="preferences"
               className="form-textarea"
-              placeholder="Describe your specialization areas (e.g., anxiety, stress management, meditation techniques)"
+              placeholder={t('specializationPlaceholder')}
               value={preferences}
               onChange={e => setPreferences(e.target.value)}
               required
@@ -82,19 +82,19 @@ const ProfileSetup = () => {
         return (
           <>
             <div className="form-group">
-              <label className="form-label" htmlFor="institution">Institution Name</label>
+              <label className="form-label" htmlFor="institution">{t('institutionName')}</label>
               <input
                 id="institution"
                 type="text"
                 className="form-input"
-                placeholder="Enter institution name"
+                placeholder={t('institutionNamePlaceholder')}
                 value={institution}
                 onChange={e => setInstitution(e.target.value)}
                 required
               />
             </div>
             <div className="form-group">
-              <label className="form-label" htmlFor="preferences">Institution Type</label>
+              <label className="form-label" htmlFor="preferences">{t('institutionType')}</label>
               <select
                 id="preferences"
                 className="form-select"
@@ -102,14 +102,14 @@ const ProfileSetup = () => {
                 onChange={e => setPreferences(e.target.value)}
                 required
               >
-                <option value="">Select institution type</option>
-                <option value="university">University</option>
-                <option value="college">College</option>
-                <option value="high-school">High School</option>
-                <option value="middle-school">Middle School</option>
-                <option value="elementary">Elementary School</option>
-                <option value="corporate">Corporate</option>
-                <option value="other">Other</option>
+                <option value="">{t('selectInstitutionType')}</option>
+                <option value="university">{t('university')}</option>
+                <option value="college">{t('college')}</option>
+                <option value="high-school">{t('highSchool')}</option>
+                <option value="middle-school">{t('middleSchool')}</option>
+                <option value="elementary">{t('elementarySchool')}</option>
+                <option value="corporate">{t('corporate')}</option>
+                <option value="other">{t('other')}</option>
               </select>
             </div>
           </>
@@ -127,15 +127,15 @@ const ProfileSetup = () => {
         <div style={{ marginBottom: '2rem', padding: '1rem', background: 'var(--background)', borderRadius: 'var(--border-radius)', border: '1px solid var(--border)' }}>
           <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)' }}>{t('personalInfo')}:</h4>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '0.5rem', fontSize: '0.875rem' }}>
-            <div>🎓 <strong>Student:</strong> Access exercises, journal, book sessions</div>
-            <div>👨‍🏫 <strong>Mentor:</strong> Guide students, manage sessions</div>
-            <div>🏫 <strong>Institution Admin:</strong> Full platform access, analytics</div>
+            <div>🎓 <strong>{t('studentDescription')}</strong></div>
+            <div>👨‍🏫 <strong>{t('mentorDescription')}</strong></div>
+            <div>🏫 <strong>{t('adminDescription')}</strong></div>
           </div>
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label className="form-label" htmlFor="role">{t('role')}</label>
+            <label className="form-label" htmlFor="role">{t('selectRole')}</label>
             <select
               id="role"
               className="form-select"
@@ -143,7 +143,7 @@ const ProfileSetup = () => {
               onChange={e => setRole(e.target.value)}
               required
             >
-              <option value="">{t('role')}</option>
+              <option value="">{t('selectRole')}</option>
               <option value="student">{t('student')}</option>
               <option value="mentor">{t('mentor')}</option>
               <option value="institution">{t('admin')}</option>

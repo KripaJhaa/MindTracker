@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import './Welcome.css';
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -8,29 +9,29 @@ const Welcome = () => {
 
   const platformFeatures = [
     {
-      title: t('dailyMeditation'),
-      description: t('dailyMeditationDesc'),
+      title: t('dailyMeditationTitle'),
+      description: t('dailyMeditationDescription'),
       benefits: t('dailyMeditationBenefits'),
       emoji: '🧘',
       color: 'var(--mindfulness-sage)'
     },
     {
-      title: t('mindfulReflection'),
-      description: t('mindfulReflectionDesc'),
+      title: t('mindfulReflectionTitle'),
+      description: t('mindfulReflectionDescription'),
       benefits: t('mindfulReflectionBenefits'),
       emoji: '📝',
       color: 'var(--mindfulness-blue)'
     },
     {
-      title: t('mentorSupport'),
-      description: t('mentorSupportDesc'),
+      title: t('mentorSupportTitle'),
+      description: t('mentorSupportDescription'),
       benefits: t('mentorSupportBenefits'),
       emoji: '💬',
       color: 'var(--mindfulness-lavender)'
     },
     {
-      title: t('simpleProgress'),
-      description: t('simpleProgressDesc'),
+      title: t('simpleProgressTitle'),
+      description: t('simpleProgressDescription'),
       benefits: t('simpleProgressBenefits'),
       emoji: '📊',
       color: 'var(--mindfulness-teal)'
@@ -38,12 +39,12 @@ const Welcome = () => {
   ];
 
   const institutionBenefits = [
-    t('reduceStress'),
-    t('improveFocus'),
-    t('supportWellness'),
-    t('buildResilience'),
-    t('fosterEnvironments'),
-    t('hipaaCompliant')
+    t('reduceStressText'),
+    t('improveFocusText'),
+    t('supportWellnessText'),
+    t('buildResilienceText'),
+    t('fosterEnvironmentsText'),
+    t('hipaaCompliantText')
   ];
 
   return (
@@ -111,7 +112,7 @@ const Welcome = () => {
             margin: 0,
             letterSpacing: '3px'
           }}>
-            {t('institutionalMindfulness')}
+            {t('institutionalMindfulnessTitle')}
           </h1>
           <span style={{ fontSize: '2rem' }}>☯️</span>
         </div>
@@ -121,7 +122,7 @@ const Welcome = () => {
           margin: 0,
           fontWeight: '300'
         }}>
-          {t('bringingMeditation')}
+          {t('bringingMeditationText')}
         </p>
       </div>
 
@@ -139,7 +140,7 @@ const Welcome = () => {
           gap: '0.5rem'
         }}>
           <span style={{ fontSize: '1.5rem' }}>🏫</span>
-          {t('supportingStudentHealth')}
+          {t('supportingStudentHealthTitle')}
         </h3>
         <p style={{
           marginBottom: '2rem',
@@ -148,11 +149,11 @@ const Welcome = () => {
           fontSize: '1.1rem',
           lineHeight: 1.6
         }}>
-          {t('platformHelpsInstitutions')}
+          {t('platformHelpsInstitutionsText')}
         </p>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '1rem'
         }}>
           {institutionBenefits.map((benefit, index) => (
@@ -196,77 +197,26 @@ const Welcome = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '0.5rem'
+          gap: '0.5rem' 
         }}>
           <span style={{ fontSize: '1.5rem' }}>🛠️</span>
-          {t('meditationTools')}
+          {t('meditationToolsTitle')}
         </h3>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '1.5rem'
-        }}>
+        <div className="features-grid">
           {platformFeatures.map((feature, index) => (
             <div
               key={index}
-              className="practice-item fade-in-up"
+              className="feature-card fade-in-up"
               style={{
-                animationDelay: `${0.5 + index * 0.1}s`,
-                padding: '2rem',
-                background: 'var(--surface)',
-                borderRadius: '20px',
-                border: '1px solid var(--border)',
-                textAlign: 'center',
-                position: 'relative',
-                overflow: 'hidden',
-                boxShadow: '0 4px 20px rgba(139, 123, 139, 0.08)'
+                animationDelay: `${0.5 + index * 0.1}s`
               }}
             >
-              <div style={{
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '1rem'
-              }}>
-                <div style={{
-                  fontSize: '3rem',
-                  background: feature.color,
-                  borderRadius: '50%',
-                  width: '80px',
-                  height: '80px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 4px 20px rgba(139, 123, 139, 0.15)'
-                }}>
-                  {feature.emoji}
-                </div>
+              <div className="feature-icon" style={{ background: feature.color }}>
+                {feature.emoji}
               </div>
-              <h4 style={{
-                margin: '0 0 0.5rem 0',
-                color: 'var(--text-primary)',
-                fontSize: '1.3rem',
-                fontWeight: '400'
-              }}>
-                {feature.title}
-              </h4>
-              <p style={{
-                margin: '0 0 1rem 0',
-                fontSize: '0.9rem',
-                color: 'var(--text-secondary)',
-                lineHeight: 1.5
-              }}>
-                {feature.description}
-              </p>
-              <p style={{
-                margin: 0,
-                fontSize: '0.85rem',
-                fontWeight: '500',
-                color: '#10b981'
-              }}>
-                Benefits: {feature.benefits}
-              </p>
+              <h4 className="feature-title">{feature.title}</h4>
+              <p className="feature-description">{feature.description}</p>
+              <p className="feature-benefits">{t('benefitsText')}: {feature.benefits}</p>
             </div>
           ))}
         </div>
@@ -286,11 +236,11 @@ const Welcome = () => {
           gap: '0.5rem'
         }}>
           <span style={{ fontSize: '1.5rem' }}>👥</span>
-          User Roles & Access Levels
+          {t('userRolesTitle')}
         </h3>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '1.5rem'
         }}>
           <div className="practice-item fade-in-up" style={{
@@ -311,7 +261,7 @@ const Welcome = () => {
               fontSize: '1.2rem',
               fontWeight: '400'
             }}>
-              Students
+              {t('studentTitle')}
             </h4>
             <p style={{
               fontSize: '0.9rem',
@@ -319,7 +269,7 @@ const Welcome = () => {
               color: 'var(--text-secondary)',
               lineHeight: 1.5
             }}>
-              Access to exercises, journaling, mentor booking, and personal progress tracking
+              {t('exerciseAccessText')}
             </p>
           </div>
           <div className="practice-item fade-in-up" style={{
@@ -340,7 +290,7 @@ const Welcome = () => {
               fontSize: '1.2rem',
               fontWeight: '400'
             }}>
-              Mentors
+              {t('mentorTitle')}
             </h4>
             <p style={{
               fontSize: '0.9rem',
@@ -348,7 +298,7 @@ const Welcome = () => {
               color: 'var(--text-secondary)',
               lineHeight: 1.5
             }}>
-              Session management, student progress monitoring, and specialized guidance tools
+              {t('sessionManagementText')}
             </p>
           </div>
           <div className="practice-item fade-in-up" style={{
@@ -369,7 +319,7 @@ const Welcome = () => {
               fontSize: '1.2rem',
               fontWeight: '400'
             }}>
-              Institution Admins
+              {t('institutionAdminTitle')}
             </h4>
             <p style={{
               fontSize: '0.9rem',
@@ -377,7 +327,7 @@ const Welcome = () => {
               color: 'var(--text-secondary)',
               lineHeight: 1.5
             }}>
-              Full platform access, analytics dashboard, user management, and compliance reporting
+              {t('platformAccessText')}
             </p>
           </div>
         </div>
@@ -395,7 +345,7 @@ const Welcome = () => {
           fontSize: '1.8rem',
           fontWeight: '300'
         }}>
-          {t('beginJourney')}
+          {t('beginJourneyTitle')}
         </h3>
         <div style={{
           display: 'flex',
@@ -410,7 +360,7 @@ const Welcome = () => {
             style={{ animationDelay: '1.1s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>🎓</span>
-            <span>{t('getStartedStudent')}</span>
+            <span>{t('getStartedStudentText')}</span>
           </button>
           <button
             className="quick-action-btn"
@@ -418,7 +368,7 @@ const Welcome = () => {
             style={{ animationDelay: '1.2s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>💬</span>
-            <span>{t('joinAsMentor')}</span>
+            <span>{t('joinAsMentorText')}</span>
           </button>
           <button
             className="quick-action-btn"
@@ -426,7 +376,7 @@ const Welcome = () => {
             style={{ animationDelay: '1.3s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>⚙️</span>
-            <span>{t('adminAccess')}</span>
+            <span>{t('adminAccessText')}</span>
           </button>
         </div>
       </div>
@@ -447,7 +397,7 @@ const Welcome = () => {
           gap: '0.5rem'
         }}>
           <span style={{ fontSize: '1.5rem' }}>🚀</span>
-          Try Demo Features
+          {t('tryDemoFeaturesTitle')}
         </h3>
         <div style={{
           display: 'grid',
@@ -459,32 +409,32 @@ const Welcome = () => {
           <button
             className="quick-action-btn"
             onClick={() => {
-              alert('Demo: This would open the mindfulness exercises section. Sign up to access all features!');
+              alert(t('exercisesSectionDemoText'));
             }}
             style={{ animationDelay: '1.3s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>🧘</span>
-            <span>Try Exercises</span>
+            <span>{t('tryExercisesText')}</span>
           </button>
           <button
             className="quick-action-btn"
             onClick={() => {
-              alert('Demo: This would open the personal journal. Sign up to start your mindfulness journey!');
+              alert(t('journalSectionDemoText'));
             }}
             style={{ animationDelay: '1.4s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>📝</span>
-            <span>Try Journal</span>
+            <span>{t('tryJournalText')}</span>
           </button>
           <button
             className="quick-action-btn"
             onClick={() => {
-              alert('Demo: This would show your progress reports. Sign up to track your wellness journey!');
+              alert(t('reportsSectionDemoText'));
             }}
             style={{ animationDelay: '1.5s' }}
           >
             <span style={{ fontSize: '1.5rem' }}>📊</span>
-            <span>View Sample Reports</span>
+            <span>{t('viewSampleReportsText')}</span>
           </button>
         </div>
         <p style={{
@@ -493,7 +443,7 @@ const Welcome = () => {
           color: 'var(--text-secondary)',
           fontStyle: 'italic'
         }}>
-          Sign up to unlock all features and track your wellness journey
+          {t('signUpToUnlockText')}
         </p>
       </div>
 
@@ -505,13 +455,13 @@ const Welcome = () => {
         marginTop: '4rem'
       }}>
         <p style={{ margin: 0 }}>
-          🏫 {t('supportingWellnessWorldwide')}
+          🏫 {t('supportingWellnessWorldwideText')}
         </p>
         <p style={{
           margin: '0.5rem 0 0 0',
           fontSize: '0.8rem'
         }}>
-          {t('buildingCommunities')}
+          {t('buildingCommunitiesText')}
         </p>
       </div>
     </div>

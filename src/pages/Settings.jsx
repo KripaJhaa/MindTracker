@@ -6,9 +6,9 @@ const Settings = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
   const [profileData, setProfileData] = useState({
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    institution: 'Example University'
+    name: t('defaultName'),
+    email: t('defaultEmail'),
+    institution: t('defaultInstitution')
   });
   const [notifications, setNotifications] = useState({
     sessionReminders: true,
@@ -142,9 +142,9 @@ const Settings = () => {
       <div className="card">
         <h3>{t('helpSupport')}</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem' }}>
-          <button className="btn btn-secondary" onClick={() => alert('User Guide functionality would be implemented here')}>{t('userGuide')}</button>
-          <button className="btn btn-secondary" onClick={() => alert('Contact Support functionality would be implemented here')}>{t('contactSupport')}</button>
-          <button className="btn btn-secondary" onClick={() => alert('FAQ functionality would be implemented here')}>{t('faq')}</button>
+          <button className="btn btn-secondary" onClick={() => alert(t('userGuideAlert'))}>{t('userGuide')}</button>
+          <button className="btn btn-secondary" onClick={() => alert(t('contactSupportAlert'))}>{t('contactSupport')}</button>
+          <button className="btn btn-secondary" onClick={() => alert(t('faqAlert'))}>{t('faq')}</button>
           <button className="btn" style={{ backgroundColor: 'var(--error)' }} onClick={() => navigate('/')}>{t('logout')}</button>
         </div>
       </div>

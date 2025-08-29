@@ -11,11 +11,11 @@ const Analytics = () => {
 
   // Sample analytics data
   const analyticsData = {
-    totalUsers: 1250,
-    activeUsers: 890,
-    totalSessions: 3450,
-    completedExercises: 8900,
-    avgMoodScore: 7.8,
+    totalUsers: t('demoTotalUsers'),
+    activeUsers: t('demoActiveUsers'),
+    totalSessions: t('demoTotalSessions'),
+    completedExercises: t('demoCompletedExercises'),
+    avgMoodScore: t('demoAvgMoodScore'),
     topExercises: [
       { name: t('breathingExercises'), count: 1250, percentage: 35 },
       { name: t('bodyScan'), count: 980, percentage: 28 },
@@ -29,10 +29,10 @@ const Analytics = () => {
       { period: t('week4'), score: 8.1 }
     ],
     institutionStats: {
-      totalInstitutions: 15,
-      activePrograms: 12,
-      avgParticipation: 78,
-      topPerforming: 'State University'
+      totalInstitutions: t('demoTotalInstitutions'),
+      activePrograms: t('demoActivePrograms'),
+      avgParticipation: t('demoAvgParticipation'),
+      topPerforming: t('demoTopInstitution')
     }
   };
 

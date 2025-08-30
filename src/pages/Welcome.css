@@ -1,9 +1,10 @@
 .page-container {
-  padding-top: 60px; /* Account for fixed header */
   min-height: 100vh;
   background: var(--background);
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden; /* Changed from overflow-x: hidden to match inline styles */
+  padding: 2rem 1rem;
+  padding-top: 80px; /* Account for fixed header + spacing */
 }
 
 .meditation-card {

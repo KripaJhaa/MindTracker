@@ -15,31 +15,30 @@ const ThemeToggle = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 'clamp(0.25rem, 1vw, 0.5rem)',
-        padding: 'clamp(0.5rem, 2vw, 0.75rem) clamp(0.75rem, 2vw, 1rem)',
+        gap: '0.5rem',
+        padding: '0.5rem 0.75rem',
         background: 'var(--surface)',
         border: '1px solid var(--border)',
-        borderRadius: 'var(--border-radius)',
+        borderRadius: '8px',
         color: 'var(--text-primary)',
         cursor: 'pointer',
-        fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
+        fontSize: '0.85rem',
         fontWeight: '500',
         transition: 'all 0.2s ease',
-        boxShadow: 'var(--shadow)',
-        minHeight: '44px',
-        minWidth: '44px',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)'
+        boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+        minHeight: '36px',
+        minWidth: '36px',
+        whiteSpace: 'nowrap'
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-1px)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
+        e.currentTarget.style.background = 'var(--background)';
         e.currentTarget.style.borderColor = 'var(--primary-color)';
+        e.currentTarget.style.transform = 'translateY(-1px)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'var(--shadow)';
+        e.currentTarget.style.background = 'var(--surface)';
         e.currentTarget.style.borderColor = 'var(--border)';
+        e.currentTarget.style.transform = 'translateY(0)';
       }}
       onFocus={(e) => {
         e.currentTarget.style.outline = '2px solid var(--primary-color)';
@@ -50,14 +49,17 @@ const ThemeToggle = () => {
       }}
     >
       <span style={{
-        fontSize: 'clamp(1rem, 3vw, 1.2rem)',
+        fontSize: '1rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
       }}>
         {isDarkMode ? '☀️' : '🌙'}
       </span>
-      <span className="theme-toggle-text">
+      <span className="theme-toggle-text" style={{
+        fontSize: '0.8rem',
+        fontWeight: '600'
+      }}>
         {isDarkMode ? t('lightMode') : t('darkMode')}
       </span>
     </button>

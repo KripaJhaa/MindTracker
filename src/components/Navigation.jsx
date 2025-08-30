@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+import ThemeToggle from './ThemeToggle';
 import mindTrackLogo from '../assets/mindtrack-icon.svg';
 import './Navigation.css';
 
@@ -83,7 +84,8 @@ const Navigation = ({ navigationItems = [] }) => {
             <br />
             Role: <strong>{user?.role}</strong>
           </div>
-          <div className="nav-footer-language">
+          <div className="nav-footer-controls">
+            <ThemeToggle />
             <LanguageSelector />
           </div>
           <button

@@ -68,12 +68,12 @@ export const translations = {
     middleSchool: 'Middle School',
     elementarySchool: 'Elementary School',
     corporate: 'Corporate',
-    studentDescription: 'Student: Access exercises, journal, book sessions',
-    mentorDescription: 'Mentor: Guide students, manage sessions', 
-    adminDescription: 'Institution Admin: Full platform access, analytics',
+    studentDescription: 'Student Description: Access exercises, journal, book sessions',
+    mentorDescription: 'Mentor Description: Guide students, manage sessions', 
+    adminDescription: 'Admin Description: Institution Admin with full platform access and analytics',
 
   // Navigation
-    exercisesTitle: 'MindTrack Exercises',
+    exercisesTitle: 'Mind Track Exercises',
     journalTitle: 'Journal',
     bookMentorTitle: 'Book Mentor',
     notificationsTitle: 'Notifications',
@@ -223,6 +223,23 @@ export const translations = {
     yourInstitution: 'your institution',
     userEngagement: 'User Engagement',
     
+    // Platform Features (for Welcome page)
+    dailyMeditationTitle: 'Daily Meditation',
+    dailyMeditationDescription: 'Daily meditation sessions to calm your mind and reduce stress',
+    dailyMeditationBenefits: 'Better sleep, reduced stress, and improved focus',
+    
+    mindfulReflectionTitle: 'Mindful Reflection',
+    mindfulReflectionDescription: 'A safe space to reflect on your emotions and thoughts',
+    mindfulReflectionBenefits: 'Better self-awareness and emotional understanding',
+    
+    mentorSupportTitle: 'Mentor Support',
+    mentorSupportDescription: 'Get personalized guidance from expert mentors',
+    mentorSupportBenefits: 'Expert guidance and personalized support',
+    
+    simpleProgressTitle: 'Simple Progress',
+    simpleProgressDescription: 'Track your mental health journey with ease',
+    simpleProgressBenefits: 'See your progress and achieve your goals',
+    
     // Welcome Page Headers
     institutionalMindfulnessTitle: 'Institutional Mindfulness',
     bringingMeditationText: 'Bringing Meditation and Awareness to Your Institution',
@@ -284,6 +301,119 @@ export const translations = {
     // Accessibility
     closeMenu: 'Close menu',
     openMenu: 'Open menu',
+
+    // Missing Institution Benefit Keys
+    reduceStressText: 'Reduce stress and anxiety among students and faculty',
+    improveFocusText: 'Improve focus and concentration in academic settings',
+    supportWellnessText: 'Support overall mental wellness and emotional health',
+    buildResilienceText: 'Build resilience and coping strategies for challenges', 
+    fosterEnvironmentsText: 'Foster supportive and mindful learning environments',
+    hipaaCompliantText: 'HIPAA compliant and secure data handling practices',
+    
+    // Missing Text Labels
+    benefitsText: 'Benefits',
+    tryExercisesText: 'Try Exercises',
+    tryJournalText: 'Try Journal',
+    viewSampleReportsText: 'View Sample Reports',
+    getStartedStudentText: 'Get Started as Student',
+    joinAsMentorText: 'Join as Mentor',
+    adminAccessText: 'Institution Admin Access',
+    supportingWellnessWorldwideText: 'Supporting wellness worldwide',
+    buildingCommunitiesText: 'Building healthy and mindful communities',
+    beginJourneyTitle: 'Begin Your Wellness Journey',
+    tryDemoFeaturesTitle: 'Try Demo Features',
+    
+    // Journal Page
+    dailyJournal: 'Daily Journal',
+    todaysThoughts: 'Today\'s Thoughts',
+    reflectionPromptsTitle: 'Reflection Prompts',
+    
+    // MindfulnessExercises Page
+    meditationSessions: 'Meditation Sessions',
+    guidedMeditations: 'Guided Meditations',
+    guidedStories: 'Guided Stories',
+    guidedStoriesDesc: 'Listen to calming stories designed to help you relax',
+    startStory: 'Start Story',
+    breathingExercises: 'Breathing Exercises',
+    breathingExercisesDesc: 'Focused breathing techniques to center your mind',
+    beginExercise: 'Begin Exercise',
+    reflectionPrompts: 'Reflection Prompts',
+    reflectionPromptsDesc: 'Thoughtful questions to guide your self-reflection',
+    reflectNow: 'Reflect Now',
+    psychometricTests: 'Psychometric Tests',
+    psychometricTestsDesc: 'Assessments to understand your mental wellness',
+    takeTest: 'Take Test',
+    recentActivity: 'Recent Activity',
+    lastCompleted: 'Last Completed',
+    timeSpentWeek: 'Time Spent This Week',
+    demoTimeMinutes: '45 minutes',
+    
+    // Growth Reports Page
+    backToDashboard: 'Back to Dashboard',
+    trackProgress: 'Track your wellness progress over time',
+    
+    // Settings Page
+    defaultName: 'John Doe',
+    defaultEmail: 'john.doe@university.edu',
+    defaultInstitution: 'Sample University',
+    accountSettings: 'Account Settings',
+    notificationSettings: 'Notification Settings',
+    changePassword: 'Change Password',
+    userGuideAlert: 'User guide will be available soon!',
+    
+    // Navigation Keys
+    bookMentor: 'Book Mentor',
+    growthReports: 'Growth Reports',
+    exercises: 'Exercises',
+    journal: 'Journal',
+    
+    // Notification Page Keys
+    sessionReminder: 'Session Reminder',
+    sessionReminderMessage: 'You have a mentoring session scheduled in 30 minutes',
+    exerciseSuggestion: 'Exercise Suggestion',
+    exerciseSuggestionMessage: 'Try the new breathing exercise to reduce stress',
+    streakMilestone: 'Streak Milestone',
+    streakMilestoneMessage: 'Congratulations! You\'ve completed 7 days in a row',
+    dailyCheckin: 'Daily Check-in',
+    dailyCheckinMessage: 'How are you feeling today? Take a moment to reflect',
+    sessionFollowup: 'Session Follow-up',
+    sessionFollowupMessage: 'How did your last mentoring session go?',
+    demoTime1: '30 minutes ago',
+    demoTime2: '2 hours ago',
+    demoTime3: '1 day ago',
+    demoTime4: '2 days ago',
+    markAsRead: 'Mark as read',
+    stayUpdated: 'Stay updated with your wellness journey',
+    recentNotifications: 'Recent Notifications',
+    achievementNotifications: 'Achievement Notifications',
+    
+    // Footer Keys
+    footerDescription: 'A comprehensive mindfulness and wellness platform for educational institutions, supporting student mental health and wellbeing.',
+    quickLinks: 'Quick Links',
+    aboutSection: 'About',
+    aboutUs: 'About Us',
+    aboutUsMessage: 'MindTracker is dedicated to bringing mindfulness and wellness to educational institutions worldwide.',
+    privacyPolicy: 'Privacy Policy',
+    privacyPolicyMessage: 'Our privacy policy ensures your data is protected and secure.',
+    termsOfService: 'Terms of Service',
+    termsOfServiceMessage: 'Please review our terms of service for platform usage guidelines.',
+    support: 'Support',
+    contactUs: 'Contact Us',
+    contactUsMessage: 'Reach out to our team at support@mindtracker.edu for assistance.',
+    helpCenter: 'Help Center',
+    helpCenterMessage: 'Visit our help center for comprehensive guides and tutorials.',
+    faq: 'FAQ',
+    faqMessage: 'Find answers to frequently asked questions about MindTracker.',
+    connect: 'Connect',
+    email: 'Email',
+    phone: 'Phone',
+    twitter: 'Twitter',
+    socialMediaMessage: 'Connect with us on social media for updates and community support.',
+    allRightsReserved: 'All rights reserved.',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    accessibility: 'Accessibility',
+    accessibilityMessage: 'MindTracker is committed to digital accessibility and inclusive design.',
   },
 
   hindi: {
@@ -646,6 +776,119 @@ export const translations = {
     // Accessibility
     closeMenu: 'मेनू बंद करें',
     openMenu: 'मेनू खोलें',
+
+    // Missing Institution Benefit Keys
+    reduceStressText: 'छात्रों और शिक्षकों में तनाव और चिंता कम करें',
+    improveFocusText: 'शैक्षणिक सेटिंग्स में ध्यान और एकाग्रता में सुधार करें',
+    supportWellnessText: 'समग्र मानसिक स्वास्थ्य और भावनात्मक स्वास्थ्य का समर्थन करें',
+    buildResilienceText: 'चुनौतियों के लिए लचीलापन और मुकाबला रणनीतियाँ बनाएं',
+    fosterEnvironmentsText: 'सहायक और मानसिक सीखने के वातावरण को बढ़ावा दें',
+    hipaaCompliantText: 'HIPAA अनुपालित और सुरक्षित डेटा हैंडलिंग प्रथाएं',
+    
+    // Missing Text Labels
+    benefitsText: 'फ़ायदे',
+    tryExercisesText: 'अभ्यास करें',
+    tryJournalText: 'जर्नल करें',
+    viewSampleReportsText: 'नमूना रिपोर्ट देखें',
+    getStartedStudentText: 'छात्र के रूप में शुरुआत करें',
+    joinAsMentorText: 'मेंटर के रूप में शामिल हों',
+    adminAccessText: 'संस्थान व्यवस्थापक पहुंच',
+    supportingWellnessWorldwideText: 'दुनियाभर में कल्याण का समर्थन',
+    buildingCommunitiesText: 'स्वस्थ और मानसिक समुदाय निर्माण',
+    beginJourneyTitle: 'अपनी कल्याण यात्रा शुरू करें',
+    tryDemoFeaturesTitle: 'डेमो सुविधाएं आज़माएं',
+    
+    // Journal Page
+    dailyJournal: 'दैनिक जर्नल',
+    todaysThoughts: 'आज के विचार',
+    reflectionPromptsTitle: 'चिंतन के सवाल',
+    
+    // MindfulnessExercises Page
+    meditationSessions: 'ध्यान सत्र',
+    guidedMeditations: 'निर्देशित ध्यान',
+    guidedStories: 'निर्देशित कहानियां',
+    guidedStoriesDesc: 'आपको आराम देने के लिए शांत कहानियां सुनें',
+    startStory: 'कहानी शुरू करें',
+    breathingExercises: 'श्वास व्यायाम',
+    breathingExercisesDesc: 'अपने मन को केंद्रित करने के लिए श्वास तकनीकें',
+    beginExercise: 'व्यायाम शुरू करें',
+    reflectionPrompts: 'चिंतन के सवाल',
+    reflectionPromptsDesc: 'आत्म-चिंतन के लिए विचारशील प्रश्न',
+    reflectNow: 'अभी चिंतन करें',
+    psychometricTests: 'मनोमितीय परीक्षण',
+    psychometricTestsDesc: 'आपकी मानसिक कल्याण को समझने के लिए मूल्यांकन',
+    takeTest: 'परीक्षण लें',
+    recentActivity: 'हाल की गतिविधि',
+    lastCompleted: 'अंतिम पूर्ण',
+    timeSpentWeek: 'इस सप्ताह बिताया गया समय',
+    demoTimeMinutes: '45 मिनट',
+    
+    // Growth Reports Page
+    backToDashboard: 'डैशबोर्ड पर वापस',
+    trackProgress: 'समय के साथ अपनी कल्याण प्रगति को ट्रैक करें',
+    
+    // Settings Page
+    defaultName: 'राम शर्मा',
+    defaultEmail: 'ram.sharma@university.edu',
+    defaultInstitution: 'नमूना विश्वविद्यालय',
+    accountSettings: 'खाता सेटिंग्स',
+    notificationSettings: 'सूचना सेटिंग्स',
+    changePassword: 'पासवर्ड बदलें',
+    userGuideAlert: 'उपयोगकर्ता गाइड जल्द ही उपलब्ध होगी!',
+    
+    // Navigation Keys
+    bookMentor: 'मेंटर बुक करें',
+    growthReports: 'विकास रिपोर्ट',
+    exercises: 'अभ्यास',
+    journal: 'जर्नल',
+    
+    // Notification Page Keys
+    sessionReminder: 'सत्र अनुस्मारक',
+    sessionReminderMessage: 'आपका मेंटरिंग सत्र 30 मिनट में निर्धारित है',
+    exerciseSuggestion: 'व्यायाम सुझाव',
+    exerciseSuggestionMessage: 'तनाव कम करने के लिए नई श्वास तकनीक का प्रयास करें',
+    streakMilestone: 'लगातार उपलब्धि',
+    streakMilestoneMessage: 'बधाई हो! आपने लगातार 7 दिन पूरे किए हैं',
+    dailyCheckin: 'दैनिक जांच',
+    dailyCheckinMessage: 'आज आप कैसा महसूस कर रहे हैं? चिंतन के लिए एक क्षण लें',
+    sessionFollowup: 'सत्र अनुवर्ती',
+    sessionFollowupMessage: 'आपका पिछला मेंटरिंग सत्र कैसा रहा?',
+    demoTime1: '30 मिनट पहले',
+    demoTime2: '2 घंटे पहले',
+    demoTime3: '1 दिन पहले',
+    demoTime4: '2 दिन पहले',
+    markAsRead: 'पढ़ा गया मार्क करें',
+    stayUpdated: 'अपनी कल्याण यात्रा के साथ अपडेट रहें',
+    recentNotifications: 'हाल की सूचनाएं',
+    achievementNotifications: 'उपलब्धि सूचनाएं',
+    
+    // Footer Keys
+    footerDescription: 'शैक्षणिक संस्थानों के लिए एक व्यापक माइंडफुलनेस और कल्याण प्लेटफॉर्म, छात्र मानसिक स्वास्थ्य और कल्याण का समर्थन करता है।',
+    quickLinks: 'त्वरित लिंक',
+    aboutSection: 'के बारे में',
+    aboutUs: 'हमारे बारे में',
+    aboutUsMessage: 'माइंडट्रैकर दुनिया भर के शैक्षणिक संस्थानों में माइंडफुलनेस और कल्याण लाने के लिए समर्पित है।',
+    privacyPolicy: 'गोपनीयता नीति',
+    privacyPolicyMessage: 'हमारी गोपनीयता नीति सुनिश्चित करती है कि आपका डेटा सुरक्षित और संरक्षित है।',
+    termsOfService: 'सेवा की शर्तें',
+    termsOfServiceMessage: 'प्लेटफॉर्म उपयोग दिशानिर्देशों के लिए कृपया हमारी सेवा की शर्तों की समीक्षा करें।',
+    support: 'सहायता',
+    contactUs: 'संपर्क करें',
+    contactUsMessage: 'सहायता के लिए support@mindtracker.edu पर हमारी टीम से संपर्क करें।',
+    helpCenter: 'सहायता केंद्र',
+    helpCenterMessage: 'व्यापक गाइड और ट्यूटोरियल के लिए हमारे सहायता केंद्र पर जाएं।',
+    faq: 'अक्सर पूछे जाने वाले प्रश्न',
+    faqMessage: 'माइंडट्रैकर के बारे में अक्सर पूछे जाने वाले प्रश्नों के उत्तर खोजें।',
+    connect: 'जुड़ें',
+    email: 'ईमेल',
+    phone: 'फोन',
+    twitter: 'ट्विटर',
+    socialMediaMessage: 'अपडेट और समुदायिक समर्थन के लिए सोशल मीडिया पर हमसे जुड़ें।',
+    allRightsReserved: 'सभी अधिकार सुरक्षित।',
+    privacy: 'गोपनीयता',
+    terms: 'शर्तें',
+    accessibility: 'पहुंच',
+    accessibilityMessage: 'माइंडट्रैकर डिजिटल पहुंच और समावेशी डिजाइन के लिए प्रतिबद्ध है।',
   },
 
   tamil: {
@@ -674,6 +917,64 @@ export const translations = {
     success: 'வெற்றி',
     welcome: 'வரவேற்கிறோம்',
     continue: 'தொடர்க',
+
+    // Welcome Page Platform Features  
+    dailyMeditationTitle: 'தினசரி தியானம்',
+    dailyMeditationDescription: 'உங்கள் மனதை அமைதிப்படுத்த மற்றும் மன அழுத்தத்தை குறைக்க தினசரி தியான அமர்வுகள்',
+    dailyMeditationBenefits: 'சிறந்த தூக்கம், குறைந்த மன அழுத்தம், மற்றும் மேம்பட்ட கவனம்',
+    
+    mindfulReflectionTitle: 'நினைவுள்ள சிந்தனை',
+    mindfulReflectionDescription: 'உங்கள் உணர்வுகள் மற்றும் எண்ணங்களை பிரதிபலிக்க ஒரு பாதுகாப்பான இடம்',
+    mindfulReflectionBenefits: 'சிறந்த சுய-விழிப்புணர்வு மற்றும் உணர்ச்சி புரிதல்',
+    
+    mentorSupportTitle: 'வழிகாட்டி ஆதரவு',
+    mentorSupportDescription: 'நிபுணர் வழிகாட்டிகளிடமிருந்து தனிப்பட்ட வழிகாட்டுதலைப் பெறுங்கள்',
+    mentorSupportBenefits: 'நிபுணர் வழிகாட்டுதல் மற்றும் தனிப்பட்ட ஆதரவு',
+    
+    simpleProgressTitle: 'எளிய முன்னேற்றம்',
+    simpleProgressDescription: 'எளிதாக உங்கள் மன ஆரோக்கிய பயணத்தை கண்காணிக்கவும்',
+    simpleProgressBenefits: 'உங்கள் முன்னேற்றத்தைப் பார்த்து உங்கள் இலக்குகளை அடையுங்கள்',
+    
+    // Welcome Page Headers
+    institutionalMindfulnessTitle: 'நிறுவன நினைவாற்றல்',
+    bringingMeditationText: 'உங்கள் நிறுவனத்திற்கு தியானம் மற்றும் விழிப்புணர்வை கொண்டு வருதல்',
+    supportingStudentHealthTitle: 'மாணவர் ஆரோக்கியத்தை ஆதரித்தல்',
+    platformHelpsInstitutionsText: 'எங்கள் தளம் நிறுவனங்களுக்கு மாணவர்களின் மன நல்வாழ்வை மேம்படுத்த உதவுகிறது',
+    meditationToolsTitle: 'தியான கருவிகள்',
+    
+    // Welcome Page User Roles
+    userRolesTitle: 'பயனர் பாத்திரங்கள் & அணுகல் நிலைகள்',
+    studentTitle: 'மாணவர்',
+    mentorTitle: 'வழிகாட்டி',
+    institutionAdminTitle: 'நிறுவன நிர்வாகி',
+    exerciseAccessText: 'பயிற்சிகள், பத்திரிகை, வழிகாட்டி முன்பதிவு மற்றும் தனிப்பட்ட முன்னேற்ற கண்காணிப்புக்கான அணுகல்',
+    sessionManagementText: 'அமர்வு நிர்வாகம், மாணவர் முன்னேற்ற கண்காணிப்பு மற்றும் சிறப்பு வழிகாட்டுதல் கருவிகள்',
+    platformAccessText: 'முழு தள அணுகல், பகுப்பாய்வு டாஷ்போர்டு, பயனர் நிர்வாகம் மற்றும் இணக்க அறிக்கையிடல்',
+    
+    // Demo Features & CTA
+    beginJourneyTitle: 'உங்கள் நல்வாழ்வு பயணத்தைத் தொடங்குங்கள்',
+    tryDemoFeaturesTitle: 'டெமோ அம்சங்களை முயற்சிக்கவும்',
+    getStartedStudentText: 'மாணவராகத் தொடங்கவும்',
+    joinAsMentorText: 'வழிகாட்டியாக சேரவும்',
+    adminAccessText: 'நிறுவன நிர்வாக அணுகல்',
+    tryExercisesText: 'பயிற்சிகளை முயற்சிக்கவும்',
+    tryJournalText: 'பத்திரிகையை முயற்சிக்கவும்',
+    viewSampleReportsText: 'மாதிரி அறிக்கைகளைப் பார்க்கவும்',
+    exercisesSectionDemoText: 'டெமோ: இது நினைவாற்றல் பயிற்சி பகுதியைத் திறக்கும். அனைத்து அம்சங்களுக்கும் அணுகல் பெற பதிவு செய்யுங்கள்!',
+    journalSectionDemoText: 'டெமோ: இது தனிப்பட்ட பத்திரிகையைத் திறக்கும். உங்கள் நினைவாற்றல் பயணத்தைத் தொடங்க பதிவு செய்யுங்கள்!',
+    reportsSectionDemoText: 'டெமோ: இது உங்கள் முன்னேற்ற அறிக்கைகளைக் காட்டும். உங்கள் நல்வாழ்வு பயணத்தைக் கண்காணிக்க பதிவு செய்யுங்கள்!',
+    signUpToUnlockText: 'அனைத்து அம்சங்களையும் திறக்க மற்றும் உங்கள் நல்வாழ்வு பயணத்தைக் கண்காணிக்க பதிவு செய்யுங்கள்',
+    supportingWellnessWorldwideText: 'உலகளவில் நல்வாழ்வை ஆதரித்தல்',
+    buildingCommunitiesText: 'ஆரோக்கியமான மற்றும் நினைவுள்ள சமुதாயங்களை உருவாக்குதல்',
+    
+    // Institution Benefits
+    reduceStressText: 'கல்வி சூழல்களில் மன அழுத்தம் மற்றும் பதட்டத்தைக் குறையுங்கள்',
+    improveFocusText: 'கல்வி அமைப்புகளில் கவனம் மற்றும் ஏகாग்ரதையை மேம்படுத்தவும்',
+    supportWellnessText: 'ஒட்டுமொத்த மன ஆரோக்கியம் மற்றும் உணர்ச்சி ஆரோக்கியத்தை ஆதரிக்கவும்',
+    buildResilienceText: 'மாணவர்கள் மற்றும் ஊழியர்களிடையே மனநிலையை வளர்க்கவும்',
+    fosterEnvironmentsText: 'கருணையான மற்றும் ஆதரவான கற்றல் சூழல்களை வளர்க்கவும்',
+    hipaaCompliantText: 'HIPAA இணக்கம் மற்றும் தரவு பாதுகாப்பு',
+    benefitsText: 'பலன்கள்',
 
     // Navigation
     exercises: 'மனநல பயிற்சிகள்',
@@ -770,5 +1071,122 @@ export const translations = {
 
     // Actions
     actions: 'செயல்கள்',
+    
+    // Accessibility
+    closeMenu: 'மெனுவை மூடு',
+    openMenu: 'மெனுவை திற',
+
+    // Missing Institution Benefit Keys
+    reduceStressText: 'மாணவர்கள் மற்றும் ஆசிரியர்களின் மன அழுத்தம் மற்றும் கவலையை குறைக்கவும்',
+    improveFocusText: 'கல்வி அமைப்புகளில் கவனம் மற்றும் ஏகாग்ரதையை மேம்படுத்தவும்',
+    supportWellnessText: 'ஒட்டுமொத்த மன ஆரோக்கியம் மற்றும் உணர்ச்சி ஆரோக்கியத்தை ஆதரிக்கவும்',
+    buildResilienceText: 'சவால்களுக்கு தகுதிகள் மற்றும் எதிர்கொள்ளும் உத்திகளை உருவாக்கவும்',
+    fosterEnvironmentsText: 'ஆதரவான மற்றும் விழிப்புணர்வு கற்றல் சூழல்களை வளர்க்கவும்',
+    hipaaCompliantText: 'HIPAA இணக்கமான மற்றும் பாதுகாப்பான தரவு கையாளுதல் நடைமுறைகள்',
+    
+    // Missing Text Labels
+    benefitsText: 'நன்மைகள்',
+    tryExercisesText: 'பயிற்சிகளை முயற்சிக்கவும்',
+    tryJournalText: 'நாட்குறிப்பு முயற்சிக்கவும்',
+    viewSampleReportsText: 'மாதிரி அறிக்கைகளை பார்க்கவும்',
+    getStartedStudentText: 'மாணவராக தொடங்கவும்',
+    joinAsMentorText: 'வழிகாட்டியாக சேரவும்',
+    adminAccessText: 'நிறுவன நிர்வாக அணுகல்',
+    supportingWellnessWorldwideText: 'உலகளவில் நல்வாழ்வை ஆதரித்தல்',
+    buildingCommunitiesText: 'ஆரோக்கியமான மற்றும் விழிப்புணர்வு சமுதாயங்களை உருவாக்குதல்',
+    beginJourneyTitle: 'உங்கள் நல்வாழ்வு பயணத்தை தொடங்குங்கள்',
+    tryDemoFeaturesTitle: 'டெமோ அம்சங்களை முயற்சிக்கவும்',
+    
+    // Journal Page
+    dailyJournal: 'தினசரி நாட்குறிப்பு',
+    todaysThoughts: 'இன்றைய எண்ணங்கள்',
+    reflectionPromptsTitle: 'சிந்தனை கேள்விகள்',
+    
+    // MindfulnessExercises Page
+    meditationSessions: 'தியான அமர்வுகள்',
+    guidedMeditations: 'வழிகாட்டப்பட்ட தியானம்',
+    guidedStories: 'வழிகாட்டப்பட்ட கதைகள்',
+    guidedStoriesDesc: 'உங்களை ஓய்வெடுக்க உதவும் அமைதியான கதைகளை கேளுங்கள்',
+    startStory: 'கதையை தொடங்கவும்',
+    breathingExercises: 'மூச்சு பயிற்சிகள்',
+    breathingExercisesDesc: 'உங்கள் மனதை மையப்படுத்த மூச்சு நுட்பங்கள்',
+    beginExercise: 'பயிற்சியை தொடங்கவும்',
+    reflectionPrompts: 'சிந்தனை கேள்விகள்',
+    reflectionPromptsDesc: 'சுய-சிந்தனைக்கு வழிகாட்ட சிந்தனையூட்டும் கேள்விகள்',
+    reflectNow: 'இப்போது சிந்தியுங்கள்',
+    psychometricTests: 'மனோவியல் சோதனைகள்',
+    psychometricTestsDesc: 'உங்கள் மன நல்வாழ்வை புரிந்துகொள்ள மதிப்பீடுகள்',
+    takeTest: 'சோதனை எடுக்கவும்',
+    recentActivity: 'சமீபத்திய செயல்பாடு',
+    lastCompleted: 'கடைசியாக முடித்தது',
+    timeSpentWeek: 'இந்த வாரம் செலவழித்த நேரம்',
+    demoTimeMinutes: '45 நிமிடங்கள்',
+    
+    // Growth Reports Page
+    backToDashboard: 'டாஷ்போர்டுக்கு திரும்பவும்',
+    trackProgress: 'காலப்போக்கில் உங்கள் நல்வாழ்வு முன்னேற்றத்தை கண்காணிக்கவும்',
+    
+    // Settings Page
+    defaultName: 'ராம் சர்மா',
+    defaultEmail: 'ram.sharma@university.edu',
+    defaultInstitution: 'மாதிரி பல்கலைக்கழகம்',
+    accountSettings: 'கணக்கு அமைப்புகள்',
+    notificationSettings: 'அறிவிப்பு அமைப்புகள்',
+    changePassword: 'கடவுச்சொல் மாற்று',
+    userGuideAlert: 'பயனர் வழிகாட்டி விரைவில் கிடைக்கும்!',
+    
+    // Navigation Keys
+    bookMentor: 'வழிகாட்டியை புக் செய்யுங்கள்',
+    growthReports: 'வளர்ச்சி அறிக்கைகள்',
+    exercises: 'பயிற்சிகள்',
+    journal: 'நாளேடு',
+    
+    // Notification Page Keys
+    sessionReminder: 'அமர்வு நினைவூட்டல்',
+    sessionReminderMessage: 'உங்கள் வழிகாட்டுதல் அமர்வு 30 நிமிடத்தில் திட்டமிடப்பட்டுள்ளது',
+    exerciseSuggestion: 'பயிற்சி பரிந்துரை',
+    exerciseSuggestionMessage: 'மன அழுத்தத்தைக் குறைக்க புதிய சுவாச நுட்பத்தைப் பாருங்கள்',
+    streakMilestone: 'தொடர்ச்சியான சாதனை',
+    streakMilestoneMessage: 'வாழ்த்துக்கள்! நீங்கள் 7 நாட்கள் தொடர்ச்சியாக நிறைவு செய்துள்ளீர்கள்',
+    dailyCheckin: 'தினசரி சரிபார்ப்பு',
+    dailyCheckinMessage: 'இன்று நீங்கள் எப்படி உணர்கிறீர்கள்? ஒரு நிமிடம் சிந்தியுங்கள்',
+    sessionFollowup: 'அமர்வு தொடர்தல்',
+    sessionFollowupMessage: 'உங்கள் கடைசி வழிகாட்டுதல் அமர்வு எப்படி இருந்தது?',
+    demoTime1: '30 நிமிடங்களுக்கு முன்பு',
+    demoTime2: '2 மணி நேரத்திற்கு முன்பு',
+    demoTime3: '1 நாள் முன்பு',
+    demoTime4: '2 நாட்களுக்கு முன்பு',
+    markAsRead: 'படித்ததாக குறிக்கவும்',
+    stayUpdated: 'உங்கள் நலன் பயணத்துடன் புதுப்பித்த நிலையில் இருங்கள்',
+    recentNotifications: 'சமீபத்திய அறிவிப்புகள்',
+    achievementNotifications: 'சாதனை அறிவிப்புகள்',
+    
+    // Footer Keys
+    footerDescription: 'கல்வி நிறுவனங்களுக்கான ஒரு விரிவான நினைவுள்ள மற்றும் நல்வாழ்வு தளம், மாணவர் மன ஆரோக்கியம் மற்றும் நல்வாழ்வை ஆதரிக்கிறது.',
+    quickLinks: 'விரைவு இணைப்புகள்',
+    aboutSection: 'பற்றி',
+    aboutUs: 'எங்களை பற்றி',
+    aboutUsMessage: 'மைண்ட்ட்ராக்கர் உலகளாவிய கல்வி நிறுவனங்களுக்கு நினைவுள்ள மற்றும் நல்வாழ்வை கொண்டு வர அர்ப்பணிக்கப்பட்டுள்ளது.',
+    privacyPolicy: 'தனியுரிமை கொள்கை',
+    privacyPolicyMessage: 'எங்கள் தனியுரிமை கொள்கை உங்கள் தரவு பாதுகாக்கப்பட்டு பாதுகாப்பாக இருப்பதை உறுதி செய்கிறது.',
+    termsOfService: 'சேவை விதிமுறைகள்',
+    termsOfServiceMessage: 'தளத்தின் பயன்பாட்டு வழிகாட்டுதல்களுக்கு எங்கள் சேவை விதிமுறைகளை மீளாய்வு செய்யவும்.',
+    support: 'ஆதரவு',
+    contactUs: 'எங்களை தொடர்பு கொள்ளுங்கள்',
+    contactUsMessage: 'உதவிக்காக support@mindtracker.edu இல் எங்கள் குழுவை தொடர்பு கொள்ளுங்கள்.',
+    helpCenter: 'உதவி மையம்',
+    helpCenterMessage: 'விரிவான வழிகாட்டிகள் மற்றும் பயிற்சிகளுக்காக எங்கள் உதவி மையத்தைப் பார்வையிடுங்கள்.',
+    faq: 'அடிக்கடி கேட்கப்படும் கேள்விகள்',
+    faqMessage: 'மைண்ட்ட்ராக்கர் பற்றிய அடிக்கடி கேட்கப்படும் கேள்விகளுக்கான பதில்களைக் கண்டறியுங்கள்.',
+    connect: 'இணைக்கவும்',
+    email: 'மின்னஞ்சல்',
+    phone: 'தொலைபேசி',
+    twitter: 'ட்விட்டர்',
+    socialMediaMessage: 'புதுப்பிப்புகள் மற்றும் சமூக ஆதரவுக்காக சமூக ஊடகங்களில் எங்களுடன் இணையுங்கள்.',
+    allRightsReserved: 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.',
+    privacy: 'தனியுரிமை',
+    terms: 'விதிமுறைகள்',
+    accessibility: 'அணுகல்தன்மை',
+    accessibilityMessage: 'மைண்ட்ட்ராக்கர் டிஜிட்டல் அணுகல்தன்மை மற்றும் உள்ளடக்க வடிவமைப்புக்கு அர்ப்பணிக்கப்பட்டுள்ளது.',
   }
 };

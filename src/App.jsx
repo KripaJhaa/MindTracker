@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Navigation from './components/Navigation';
 import PublicNavigation from './components/PublicNavigation';
+import Footer from './components/Footer';
 import { ProtectedRoute } from './components/ProtectedRoute';
-import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 // Pages
@@ -25,14 +25,21 @@ import Notifications from './pages/Notifications';
 function App() {
   const { isAuthenticated } = useAuth();
 
+  // Ensure consistent scroll position on route changes
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0);
+    };
+    
+    // Reset scroll on component mount
+    handleRouteChange();
+  }, []);
+
   return (
     <Router>
       <div className="app">
           <header className="app-header">
             {isAuthenticated ? <Navigation /> : <PublicNavigation />}
-            <div className="settings-bar">
-              <ThemeToggle />
-            </div>
           </header>
           <main className="app-content">
             <Routes>
@@ -56,6 +63,7 @@ function App() {
               <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
   );

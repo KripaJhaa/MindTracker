@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
@@ -7,6 +7,11 @@ import './Welcome.css';
 const Welcome = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const platformFeatures = [
     {
@@ -56,13 +61,7 @@ const Welcome = () => {
         keywords="mindfulness platform, educational institutions, student wellness, guided meditation, mental health support, institutional mindfulness, wellness tracking"
         url="/welcome"
       />
-      <div className="page-container fade-in-up" style={{
-      background: 'var(--background)',
-      minHeight: '100vh',
-      padding: '2rem 1rem',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+      <div className="page-container fade-in-up">
       {/* Subtle Animated Background Elements */}
       <div style={{
         position: 'absolute',
@@ -110,6 +109,7 @@ const Welcome = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          paddingTop: '42px',
           gap: '1rem',
           marginBottom: '1rem'
         }}>

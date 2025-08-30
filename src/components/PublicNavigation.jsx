@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+import ThemeToggle from './ThemeToggle';
 
 const PublicNavigation = () => {
   const navigate = useNavigate();
@@ -19,39 +20,42 @@ const PublicNavigation = () => {
 
   return (
     <nav className="public-navigation">
-            <div className="nav-brand">
-          <button 
-            onClick={() => navigate('/')}
-            className="logo-button"
-            style={{
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              cursor: 'pointer'
-            }}
-          >
-            <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>MindTrack</h3>
-          </button>
-        </div>
+      <div className="nav-brand">
+        <button 
+          onClick={() => navigate('/')}
+          className="logo-button"
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer'
+          }}
+        >
+          <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>MindTrack</h3>
+        </button>
+      </div>
 
-        <div className="nav-links">
-          {/* Home link removed as logo is now clickable */}
-        </div>
+      <div className="nav-links">
+        {/* Home link removed as logo is now clickable */}
+      </div>
 
       <div className="nav-actions">
+        <ThemeToggle />
         <LanguageSelector />
-        <button
-          className="btn btn-secondary"
-          onClick={() => navigate('/login')}
-        >
-          {t('signIn')}
-        </button>
-        <button
-          className="btn"
-          onClick={() => navigate('/signup')}
-        >
-          {t('signUp')}
-        </button>
+        <div className="auth-buttons">
+          <button
+            className="btn btn-secondary"
+            onClick={() => navigate('/login')}
+          >
+            {t('signIn')}
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate('/signup')}
+          >
+            {t('signUp')}
+          </button>
+        </div>
       </div>
 
       <style jsx>{`
@@ -102,9 +106,55 @@ const PublicNavigation = () => {
 
         .nav-actions {
           display: flex;
-          gap: 0.5rem;
-          flex-direction: row;
+          gap: 1rem;
           align-items: center;
+          height: 100%;
+        }
+
+        .auth-buttons {
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+        }
+
+        .btn {
+          padding: 0.5rem 1.25rem;
+          border: none;
+          border-radius: 8px;
+          font-size: 0.875rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 36px;
+          white-space: nowrap;
+        }
+
+        .btn-primary {
+          background: var(--primary-color);
+          color: white;
+          box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+          background: var(--primary-hover);
+          transform: translateY(-1px);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+          background: transparent;
+          color: var(--text-primary);
+          border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+          background: var(--surface);
+          border-color: var(--primary-color);
+          transform: translateY(-1px);
         }
 
         @media (max-width: 768px) {
@@ -120,13 +170,43 @@ const PublicNavigation = () => {
             gap: 0.5rem;
           }
 
-          .nav-actions button {
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
+          .auth-buttons {
+            gap: 0.5rem;
+          }
+
+          .btn {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+            min-height: 32px;
           }
 
           .nav-brand h3 {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .public-navigation {
+            padding: 0 0.75rem;
+          }
+
+          .nav-actions {
+            gap: 0.375rem;
+          }
+
+          .auth-buttons {
+            gap: 0.375rem;
+          }
+
+          .btn {
+            font-size: 0.75rem;
+            padding: 0.35rem 0.6rem;
+            min-height: 30px;
+          }
+
+          /* Hide theme toggle text on very small screens */
+          .nav-actions :global(.theme-toggle-text) {
+            display: none !important;
           }
         }
       `}</style>

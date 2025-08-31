@@ -22,6 +22,15 @@ import MindfulnessExercises from './pages/MindfulnessExercises';
 import ProfileSetup from './pages/ProfileSetup';
 import Notifications from './pages/Notifications';
 
+// Footer Pages
+import AboutUs from './pages/AboutUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import ContactUs from './pages/ContactUs';
+import HelpCenter from './pages/HelpCenter';
+import FAQ from './pages/FAQ';
+import Accessibility from './pages/Accessibility';
+
 function App() {
   const { isAuthenticated } = useAuth();
 
@@ -48,6 +57,15 @@ function App() {
               <Route path="/welcome" element={<Welcome />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              
+              {/* Footer Pages - Public */}
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               
               {/* Protected Routes */}
               <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />

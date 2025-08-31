@@ -31,33 +31,36 @@ const Footer = () => {
         <div className="footer-section">
           <h5>{t('aboutSection')}</h5>
           <ul className="footer-links">
-            <li><button onClick={() => alert(t('aboutUsMessage'))}>{t('aboutUs')}</button></li>
-            <li><button onClick={() => alert(t('privacyPolicyMessage'))}>{t('privacyPolicy')}</button></li>
-            <li><button onClick={() => alert(t('termsOfServiceMessage'))}>{t('termsOfService')}</button></li>
+            <li><button onClick={() => navigate('/about-us')}>{t('aboutUs')}</button></li>
+            <li><button onClick={() => navigate('/privacy-policy')}>{t('privacyPolicy')}</button></li>
+            <li><button onClick={() => navigate('/terms-of-service')}>{t('termsOfService')}</button></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h5>{t('support')}</h5>
           <ul className="footer-links">
-            <li><button onClick={() => alert(t('contactUsMessage'))}>{t('contactUs')}</button></li>
-            <li><button onClick={() => alert(t('helpCenterMessage'))}>{t('helpCenter')}</button></li>
-            <li><button onClick={() => alert(t('faqMessage'))}>{t('faq')}</button></li>
+            <li><button onClick={() => navigate('/contact-us')}>{t('contactUs')}</button></li>
+            <li><button onClick={() => navigate('/help-center')}>{t('helpCenter')}</button></li>
+            <li><button onClick={() => navigate('/faq')}>{t('faq')}</button></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h5>{t('connect')}</h5>
           <div className="footer-social">
-            <button onClick={() => alert(t('socialMediaMessage'))} className="social-btn">
-              📧 {t('email')}
-            </button>
-            <button onClick={() => alert(t('socialMediaMessage'))} className="social-btn">
-              📞 {t('phone')}
-            </button>
-            <button onClick={() => alert(t('socialMediaMessage'))} className="social-btn">
-              🐦 {t('twitter')}
-            </button>
+            <div className="social-info">
+              <span className="social-icon">📧</span>
+              <span className="social-text">hello@mindtracker.edu</span>
+            </div>
+            <div className="social-info">
+              <span className="social-icon">📞</span>
+              <span className="social-text">+1 (555) 123-4567</span>
+            </div>
+            <div className="social-info">
+              <span className="social-icon">🌐</span>
+              <span className="social-text">mindtracker.edu</span>
+            </div>
           </div>
         </div>
       </div>
@@ -66,11 +69,11 @@ const Footer = () => {
         <div className="footer-bottom-content">
           <p>&copy; {currentYear} MindTracker. {t('allRightsReserved')}</p>
           <div className="footer-bottom-links">
-            <button onClick={() => alert(t('privacyPolicyMessage'))}>{t('privacy')}</button>
+            <button onClick={() => navigate('/privacy-policy')}>{t('privacy')}</button>
             <span>•</span>
-            <button onClick={() => alert(t('termsOfServiceMessage'))}>{t('terms')}</button>
+            <button onClick={() => navigate('/terms-of-service')}>{t('terms')}</button>
             <span>•</span>
-            <button onClick={() => alert(t('accessibilityMessage'))}>{t('accessibility')}</button>
+            <button onClick={() => navigate('/accessibility')}>{t('accessibility')}</button>
           </div>
         </div>
       </div>

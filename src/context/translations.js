@@ -414,6 +414,9 @@ export const translations = {
     terms: 'Terms',
     accessibility: 'Accessibility',
     accessibilityMessage: 'MindTracker is committed to digital accessibility and inclusive design.',
+    
+    // Additional page translations
+    aboutUsSubtitle: 'Learn about our mission and values',
   },
 
   hindi: {
@@ -889,6 +892,9 @@ export const translations = {
     terms: 'शर्तें',
     accessibility: 'पहुंच',
     accessibilityMessage: 'माइंडट्रैकर डिजिटल पहुंच और समावेशी डिजाइन के लिए प्रतिबद्ध है।',
+    
+    // Additional page translations
+    aboutUsSubtitle: 'हमारे मिशन और मूल्यों के बारे में जानें',
   },
 
   tamil: {
@@ -1188,5 +1194,8 @@ export const translations = {
     terms: 'விதிமுறைகள்',
     accessibility: 'அணுகல்தன்மை',
     accessibilityMessage: 'மைண்ட்ட்ராக்கர் டிஜிட்டல் அணுகல்தன்மை மற்றும் உள்ளடக்க வடிவமைப்புக்கு அர்ப்பணிக்கப்பட்டுள்ளது.',
+    
+    // Additional page translations
+    aboutUsSubtitle: 'எங்கள் நோக்கம் மற்றும் மதிப்புகளை பற்றி அறியுங்கள்',
   }
 };

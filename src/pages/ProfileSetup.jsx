@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -13,6 +13,11 @@ const ProfileSetup = () => {
   const [email, setEmail] = useState('');
   const [institution, setInstitution] = useState('');
   const [preferences, setPreferences] = useState('');
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');

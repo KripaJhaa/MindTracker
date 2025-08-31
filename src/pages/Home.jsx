@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -8,6 +8,11 @@ const Home = () => {
   const navigate = useNavigate();
   const { user, isStudent, isMentor, isAdmin } = useAuth();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const getWelcomeMessage = () => {
     const timeOfDay = new Date().getHours();

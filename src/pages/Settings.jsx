@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Settings = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [profileData, setProfileData] = useState({
     name: t('defaultName'),
     email: t('defaultEmail'),

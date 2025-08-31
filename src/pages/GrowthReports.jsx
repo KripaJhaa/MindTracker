@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const GrowthReports = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Sample data for charts
   const dailyMoodData = [

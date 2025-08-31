@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,6 +10,11 @@ const BookMentor = () => {
   const [showScheduleModal, setShowScheduleModal] = useState(false);
   const [showMentorModal, setShowMentorModal] = useState(false);
   const [selectedSession, setSelectedSession] = useState(null);
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Sample session data
   const sessions = [

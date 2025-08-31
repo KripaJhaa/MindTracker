@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
@@ -7,6 +7,11 @@ const Journal = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
   const [entry, setEntry] = useState('');
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

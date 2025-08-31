@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -7,6 +7,11 @@ const Signup = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const [formData, setFormData] = useState({
     email: '',

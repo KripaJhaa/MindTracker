@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
@@ -6,6 +6,11 @@ import SEOHead from '../components/SEOHead';
 const MindfulnessExercises = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

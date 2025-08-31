@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const MainMenu = () => {
   const navigate = useNavigate();
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div style={{ maxWidth: 400, margin: '2rem auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
   <h1>MindTrack App</h1>

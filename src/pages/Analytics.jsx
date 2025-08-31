@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -8,6 +8,11 @@ const Analytics = () => {
   const { user } = useAuth();
   const { t } = useLanguage();
   const [selectedPeriod, setSelectedPeriod] = useState('week');
+
+  // Ensure page starts at top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Sample analytics data
   const analyticsData = {

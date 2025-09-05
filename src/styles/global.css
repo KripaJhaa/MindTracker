@@ -8,7 +8,7 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   width: 100%;
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   scroll-behavior: smooth;
 }
 
@@ -50,6 +50,9 @@ html {
 
   /* Typography */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-primary: 'Gilroy', sans-serif;
+  --font-family-secondary: 'Overpass Mono', monospace;
+  --font-family-heading: 'Cirka', serif;
 
   /* Gradients - Subtle and Calming */
   --gradient-primary: linear-gradient(135deg, #fef7ed 0%, #f3f4f6 100%);
@@ -217,6 +220,7 @@ h1 {
   margin-bottom: 1rem;
   color: var(--text-primary);
   line-height: 1.2;
+  font-family: var(--font-family-heading);
 }
 
 h2 {
@@ -225,6 +229,7 @@ h2 {
   margin-bottom: 1rem;
   color: var(--text-primary);
   line-height: 1.3;
+  font-family: var(--font-family-heading);
 }
 
 h3 {
@@ -233,6 +238,7 @@ h3 {
   margin-bottom: 0.75rem;
   color: var(--text-primary);
   line-height: 1.4;
+  font-family: var(--font-family-heading);
 }
 
 p {
@@ -240,6 +246,10 @@ p {
   margin-bottom: 1rem;
   font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.6;
+}
+
+code, pre {
+  font-family: var(--font-family-secondary);
 }
 
 /* Buttons */
@@ -1302,5 +1312,1099 @@ p {
   .main-content {
     margin-top: 56px; /* Slightly smaller on mobile */
     min-height: calc(100vh - 56px);
+  }
+}
+
+/* Enhanced Mentor Directory Styles */
+.mentor-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.mentor-card {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.mentor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mentor-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--mindfulness-lavender));
+  color: white;
+}
+
+.mentor-avatar {
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.mentor-info {
+  flex: 1;
+}
+
+.mentor-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.mentor-specialty {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.mentor-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.availability {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.availability.available {
+  background: var(--success);
+  color: white;
+}
+
+.availability.busy {
+  background: var(--error);
+  color: white;
+}
+
+.mentor-details {
+  padding: 1.5rem;
+}
+
+.mentor-bio {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.mentor-tags {
+  margin-bottom: 1.5rem;
+}
+
+.tag-section {
+  margin-bottom: 0.75rem;
+}
+
+.tag-section strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  background: var(--mindfulness-blue);
+  color: var(--text-primary);
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mentor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--background);
+  border-top: 1px solid var(--border);
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Session List Styles */
+.session-list {
+  margin-top: 1rem;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+}
+
+.session-item.completed {
+  opacity: 0.7;
+}
+
+.session-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.session-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.session-topic {
+  font-style: italic;
+  color: var(--primary-color) !important;
+}
+
+.session-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+}
+
+.btn-link:hover {
+  background: var(--mindfulness-blue);
+}
+
+.no-sessions {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 2rem;
+}
+
+.session-status {
+  text-align: right;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.completed {
+  background: var(--success);
+  color: white;
+}
+
+/* Enhanced Booking Modal Styles */
+.booking-modal {
+  max-width: 600px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--mindfulness-blue);
+}
+
+.mentor-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.mentor-summary .mentor-avatar {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+}
+
+.mentor-summary-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.125rem;
+}
+
+.mentor-summary-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.booking-form {
+  margin-bottom: 2rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 123, 139, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-help {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.booking-summary {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-summary h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row.total {
+  border-top: 2px solid var(--border);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--primary-color);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Mobile responsive styles for enhanced booking */
+@media (max-width: 768px) {
+  .mentor-directory {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .mentor-meta {
+    justify-content: center;
+  }
+
+  .mentor-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .session-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .session-actions {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+  }
+
+  .modal-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* Additional mobile optimizations for small screens */
+@media (max-width: 480px) {
+  /* Mentor Card Mobile Optimizations */
+  .mentor-card {
+    margin-bottom: 1rem;
+  }
+
+  .mentor-header {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .mentor-avatar {
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .mentor-info h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .mentor-specialty {
+    font-size: 0.8rem;
+  }
+
+  .mentor-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.7rem;
+  }
+
+  .mentor-details {
+    padding: 1rem;
+  }
+
+  .mentor-bio {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .mentor-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  /* Session Item Mobile Optimizations */
+  .session-item {
+    padding: 0.75rem;
+  }
+
+  .session-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .session-info p {
+    font-size: 0.8rem;
+  }
+
+  .session-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 44px; /* Touch-friendly target */
+  }
+
+  /* Booking Modal Mobile Optimizations */
+  .booking-modal {
+    width: 95vw;
+    max-width: none;
+    max-height: 95vh;
+    margin: 2.5vh auto;
+  }
+
+  .modal-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .mentor-summary {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .mentor-summary .mentor-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .mentor-summary-info h4 {
+    font-size: 1rem;
+  }
+
+  .mentor-summary-info p {
+    font-size: 0.8rem;
+  }
+
+  /* Form Mobile Optimizations */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.75rem;
+    min-height: 44px; /* Touch-friendly target */
+  }
+
+  .form-textarea {
+    min-height: 80px;
+  }
+
+  .form-help {
+    font-size: 0.7rem;
+  }
+
+  /* Booking Summary Mobile Optimizations */
+  .booking-summary {
+    padding: 1rem;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .summary-row span:first-child {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+
+  .summary-row span:last-child {
+    font-size: 0.9rem;
+  }
+
+  /* Modal Buttons Mobile Optimizations */
+  .modal-buttons {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .modal-buttons .btn {
+    min-height: 48px; /* Touch-friendly target */
+    font-size: 1rem;
+  }
+
+  /* Touch-friendly improvements */
+  .btn {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* Card improvements for mobile */
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-header {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Grid improvements for mobile */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Page container mobile adjustments */
+  .page-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (320px and below) */
+@media (max-width: 320px) {
+  .mentor-directory {
+    gap: 1rem;
+  }
+
+  .mentor-card {
+    border-radius: 8px;
+  }
+
+  .booking-modal {
+    width: 98vw;
+    margin: 1vh auto;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile viewport height variable for dynamic viewport */
+:root {
+  --vh: 1vh;
+}
+
+/* Ensure proper mobile viewport handling */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-height: calc(var(--vh, 1vh) * 95);
+    overflow-y: auto;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .mentor-card:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+
+  .btn-link:hover {
+    background: none; /* Disable hover effects on touch devices */
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mentor-card {
+    border: 2px solid var(--text-primary);
+  }
+
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .tag {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .mentor-card,
+  .btn,
+  .modal-content {
+    transition: none;
+  }
+
+  .mentor-card:hover {
+    transform: none;
+  }
+}
+
+/* Multi-step Booking Modal Styles */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: var(--border-radius);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--border);
+  color: var(--text-secondary);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+  background: var(--primary-color);
+  color: white;
+}
+
+.step-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.step.active .step-label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Consent Section Styles */
+.consent-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+}
+
+.consent-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.consent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.consent-item input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--primary-color);
+}
+
+.consent-label {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.consent-label a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.consent-label a:hover {
+  color: var(--primary-hover);
+}
+
+.consent-description {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  padding-left: 1.875rem;
+}
+
+/* Booking Review Styles */
+.booking-review {
+  min-height: 300px;
+}
+
+/* Enhanced Modal Buttons for Multi-step */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1.5rem;
+}
+
+.modal-buttons .btn {
+  flex: 1;
+  min-height: 48px;
+}
+
+/* Mobile Optimizations for Multi-step Modal */
+@media (max-width: 768px) {
+  .step-indicator {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  .step-number {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
+  }
+
+  .step-label {
+    font-size: 0.7rem;
+  }
+
+  .consent-section {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .consent-item {
+    gap: 0.5rem;
+  }
+
+  .consent-item input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .consent-label {
+    font-size: 0.8rem;
+  }
+
+  .consent-description {
+    font-size: 0.75rem;
+    padding-left: 1.5rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .modal-buttons .btn {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+  }
+
+  .modal-buttons .btn:first-child {
+    order: 2;
+  }
+
+  .modal-buttons .btn:nth-child(2) {
+    order: 3;
+  }
+
+/* Enhanced mobile modal button fixes */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end; /* Position modal at bottom on mobile */
+  }
+
+  .booking-modal {
+    max-height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    margin: 0;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    position: relative;
+  }
+
+  .booking-modal .modal-content {
+    max-height: calc(var(--vh, 1vh) * 100);
+    padding-bottom: 120px; /* Space for fixed footer */
+    overflow-y: auto;
+    display: block; /* Reset flexbox for content scrolling */
+  }
+
+  .booking-modal .modal-body {
+    overflow-y: visible; /* Let parent handle scrolling */
+  }
+
+  .booking-modal .modal-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 2px solid var(--border);
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1001; /* Above modal overlay */
+  }
+
+  .booking-modal .modal-buttons {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Ensure buttons are properly ordered for mobile UX */
+  .booking-modal .modal-buttons .back-btn {
+    order: 2;
+  }
+  .booking-modal .modal-buttons .cancel-btn {
+    order: 3;
+  }
+  .booking-modal .modal-buttons .primary-btn {
+    order: 1;
+  }
+
+  /* Ensure buttons are properly spaced and visible */
+  .modal-buttons .btn {
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+  }
+}
+
+/* Extra small screens button fixes */
+@media (max-width: 480px) {
+  .booking-modal .modal-footer {
+    padding: 0.75rem;
+  }
+
+  .booking-modal .modal-buttons {
+    gap: 0.5rem;
+  }
+
+  .modal-buttons .btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-indicator {
+    gap: 0.75rem;
+  }
+
+  .step {
+    gap: 0.25rem;
+  }
+
+  .consent-section h4 {
+    font-size: 1rem;
+  }
+
+  .booking-review {
+    min-height: 250px;
+  }
+}
+
+/* Modal body and footer styles for proper mobile layout */
+.modal-body {
+  margin-bottom: 2rem;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+/* Mobile modal footer improvements */
+@media (max-width: 768px) {
+  .modal-footer {
+    position: sticky;
+    bottom: 0;
+    background: var(--surface);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 2px solid var(--border);
+  }
+
+  .modal-footer .modal-buttons {
+    margin-top: 0;
+  }
+
+  .modal-footer .btn {
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
   }
 }

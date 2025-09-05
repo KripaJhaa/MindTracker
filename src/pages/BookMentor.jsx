@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
+import {
+  MentorDirectory,
+  SessionList,
+  BookingModal
+} from '../components/BookMentor';
 
 const BookMentor = () => {
   const navigate = useNavigate();
@@ -10,11 +15,79 @@ const BookMentor = () => {
   const [showScheduleModal, setShowScheduleModal] = useState(false);
   const [showMentorModal, setShowMentorModal] = useState(false);
   const [selectedSession, setSelectedSession] = useState(null);
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [bookingStep, setBookingStep] = useState(1); // 1: Select Mentor, 2: Book Session
+  const [bookingData, setBookingData] = useState({
+    date: '',
+    time: '',
+    discussionTopic: '',
+    additionalDetails: ''
+  });
 
   // Ensure page starts at top on load/refresh
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Sample mentors data
+  const mentors = [
+    {
+      id: 1,
+      name: 'Dr. Sarah Wilson',
+      specialty: 'Clinical Psychologist',
+      experience: '8 years',
+      rating: 4.9,
+      reviews: 127,
+      avatar: '👩‍⚕️',
+      availability: 'Available',
+      bio: 'Specialized in anxiety, depression, and mindfulness practices. Helps students manage academic stress and personal challenges.',
+      specialties: ['Anxiety', 'Depression', 'Academic Stress', 'Mindfulness'],
+      languages: ['English', 'Hindi'],
+      sessionPrice: '₹1500/session'
+    },
+    {
+      id: 2,
+      name: 'Dr. Michael Brown',
+      specialty: 'Mindfulness Coach',
+      experience: '6 years',
+      rating: 4.8,
+      reviews: 89,
+      avatar: '👨‍⚕️',
+      availability: 'Available',
+      bio: 'Expert in meditation techniques and breathing exercises. Focuses on building long-term mindfulness habits.',
+      specialties: ['Meditation', 'Breathing Exercises', 'Habit Building', 'Stress Management'],
+      languages: ['English', 'Tamil'],
+      sessionPrice: '₹1200/session'
+    },
+    {
+      id: 3,
+      name: 'Dr. Emily Davis',
+      specialty: 'Therapist',
+      experience: '10 years',
+      rating: 4.7,
+      reviews: 156,
+      avatar: '👩‍⚕️',
+      availability: 'Busy',
+      bio: 'Experienced therapist specializing in student mental health, career counseling, and emotional wellbeing.',
+      specialties: ['Therapy', 'Career Counseling', 'Emotional Health', 'Student Support'],
+      languages: ['English'],
+      sessionPrice: '₹1800/session'
+    },
+    {
+      id: 4,
+      name: 'Dr. Raj Kumar',
+      specialty: 'Counselor',
+      experience: '5 years',
+      rating: 4.6,
+      reviews: 73,
+      avatar: '👨‍⚕️',
+      availability: 'Available',
+      bio: 'Passionate about helping students navigate life transitions and build resilience through counseling.',
+      specialties: ['Life Transitions', 'Resilience Building', 'Counseling', 'Personal Growth'],
+      languages: ['English', 'Hindi', 'Tamil'],
+      sessionPrice: '₹1000/session'
+    }
+  ];
 
   // Sample session data
   const sessions = [
@@ -54,6 +127,50 @@ const BookMentor = () => {
       case 'cancelled': return 'var(--error)';
       default: return 'var(--text-secondary)';
     }
+  };
+
+  const handleMentorSelect = (mentor) => {
+    setSelectedMentor(mentor);
+    setBookingStep(2);
+    setShowScheduleModal(true);
+  };
+
+  const handleBookingSubmit = () => {
+    // Close modal first
+    setShowScheduleModal(false);
+    setSelectedMentor(null);
+    setBookingStep(1);
+
+    // Reset booking data
+    setBookingData({
+      date: '',
+      time: '',
+      discussionTopic: '',
+      additionalDetails: ''
+    });
+
+    // Show success message after modal closes
+    setTimeout(() => {
+      const successMessage = `
+🎉 Session Booked Successfully!
+
+📅 Date: ${bookingData.date}
+⏰ Time: ${bookingData.time}
+👨‍⚕️ Mentor: ${selectedMentor.name}
+💬 Topic: ${bookingData.discussionTopic}
+
+You will receive a confirmation email shortly with session details and meeting link.
+      `;
+
+      alert(successMessage);
+    }, 300); // Small delay to ensure modal closes smoothly
+  };
+
+  const handleBookingDataChange = (field, value) => {
+    setBookingData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
 
   if (isAdmin) {
@@ -245,7 +362,7 @@ const BookMentor = () => {
     );
   }
 
-  // Student view - original booking interface
+  // Student view - Enhanced booking interface
   return (
     <div className="page-container fade-in">
       <div className="page-header">
@@ -253,122 +370,70 @@ const BookMentor = () => {
         <p>Find and schedule sessions with experienced mentors</p>
       </div>
 
+      {/* Mentor Directory */}
+      <MentorDirectory
+        mentors={mentors}
+        onBookSession={handleMentorSelect}
+      />
+
+      {/* Quick Booking Actions */}
       <div className="grid grid-2">
-        <div className="card">
-          <h3>Mentor Directory</h3>
-          <p>Search and filter mentors by specialty, availability, and ratings.</p>
-          <button className="btn" style={{ marginTop: '1rem' }}>Browse Mentors</button>
-        </div>
+        <SessionList
+          sessions={sessions}
+          title="My Upcoming Sessions"
+          showActions={true}
+          emptyMessage="No upcoming sessions"
+        />
 
-        <div className="card">
-          <h3>Session Scheduling</h3>
-          <p>Choose your preferred date and time for the session.</p>
-          <button className="btn" style={{ marginTop: '1rem' }}>Schedule Session</button>
-        </div>
+        <SessionList
+          sessions={sessions}
+          title="Session History"
+          showActions={false}
+          emptyMessage="No completed sessions"
+        />
       </div>
 
-      <div className="card">
-        <h3>Pre-Session Questionnaire</h3>
-        <div className="form-group">
-          <label className="form-label">What's on your mind?</label>
-          <textarea
-            className="form-textarea"
-            placeholder="Share what's been on your mind lately..."
-            rows="3"
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Current mood</label>
-          <select className="form-select">
-            <option>Select mood</option>
-            <option>😊 Happy</option>
-            <option>😢 Sad</option>
-            <option>😰 Anxious</option>
-            <option>😌 Calm</option>
-          </select>
-        </div>
-      </div>
+      {/* Enhanced Booking Modal */}
+      <BookingModal
+        isOpen={showScheduleModal}
+        selectedMentor={selectedMentor}
+        bookingData={bookingData}
+        onClose={() => {
+          setShowScheduleModal(false);
+          setSelectedMentor(null);
+          setBookingStep(1);
+        }}
+        onBookingDataChange={handleBookingDataChange}
+        onSubmit={handleBookingSubmit}
+      />
 
-      {/* Schedule Session Modal */}
-      {showScheduleModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h3>{t('scheduleSession')}</h3>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem' }}>{t('selectDateTime')}</label>
-              <input type="datetime-local" className="form-input" />
-            </div>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem' }}>{t('sessionType')}</label>
-              <select className="form-select">
-                <option>{t('oneOnOne')}</option>
-                <option>{t('groupSession')}</option>
-              </select>
-            </div>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem' }}>{t('availableMentors')}</label>
-              <select className="form-select">
-                <option>Dr. Sarah Wilson</option>
-                <option>Dr. Michael Brown</option>
-                <option>Dr. Emily Davis</option>
-              </select>
-            </div>
-            <div className="modal-buttons">
-              <button 
-                className="btn btn-secondary"
-                onClick={() => setShowScheduleModal(false)}
-              >
-                {t('cancel')}
-              </button>
-              <button 
-                className="btn"
-                onClick={() => {
-                  alert(t('sessionBooked'));
-                  setShowScheduleModal(false);
-                }}
-              >
-                {t('bookSession')}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Manage Mentors Modal */}
+      {/* Legacy Modals (keeping for admin/mentor views) */}
       {showMentorModal && (
         <div className="modal-overlay">
           <div className="modal-content">
             <h3>{t('manageMentors')}</h3>
             <div style={{ marginBottom: '1rem' }}>
               <div className="mentor-grid">
-                <div className="mentor-card">
-                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>👩‍⚕️</div>
-                  <div style={{ fontWeight: 'bold' }}>Dr. Sarah Wilson</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Clinical Psychologist</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--success)' }}>Available</div>
-                </div>
-                <div className="mentor-card">
-                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>👨‍⚕️</div>
-                  <div style={{ fontWeight: 'bold' }}>Dr. Michael Brown</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>MindTrack Coach</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--success)' }}>Available</div>
-                </div>
-                <div className="mentor-card">
-                  <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>👩‍⚕️</div>
-                  <div style={{ fontWeight: 'bold' }}>Dr. Emily Davis</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Therapist</div>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--warning)' }}>Busy</div>
-                </div>
+                {mentors.map((mentor) => (
+                  <div key={mentor.id} className="mentor-card">
+                    <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{mentor.avatar}</div>
+                    <div style={{ fontWeight: 'bold' }}>{mentor.name}</div>
+                    <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>{mentor.specialty}</div>
+                    <div style={{ fontSize: '0.875rem', color: mentor.availability === 'Available' ? 'var(--success)' : 'var(--warning)' }}>
+                      {mentor.availability}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="modal-buttons">
-              <button 
+              <button
                 className="btn btn-secondary"
                 onClick={() => setShowMentorModal(false)}
               >
                 {t('cancel')}
               </button>
-              <button 
+              <button
                 className="btn"
                 onClick={() => {
                   alert('Mentor management functionality would be implemented here');

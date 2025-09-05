@@ -392,7 +392,7 @@ export const translations = {
     quickLinks: 'Quick Links',
     aboutSection: 'About',
     aboutUs: 'About Us',
-    aboutUsMessage: 'MindTracker is dedicated to bringing mindfulness and wellness to educational institutions worldwide.',
+    aboutUsMessage: 'A platform dedicated to promoting wellness and mindfulness.',
     privacyPolicy: 'Privacy Policy',
     privacyPolicyMessage: 'Our privacy policy ensures your data is protected and secure.',
     termsOfService: 'Terms of Service',
@@ -866,11 +866,11 @@ export const translations = {
     achievementNotifications: 'उपलब्धि सूचनाएं',
     
     // Footer Keys
-    footerDescription: 'शैक्षणिक संस्थानों के लिए एक व्यापक माइंडफुलनेस और कल्याण प्लेटफॉर्म, छात्र मानसिक स्वास्थ्य और कल्याण का समर्थन करता है।',
+    footerDescription: 'कल्याण और माइंडफुलनेस के लिए एक व्यापक प्लेटफॉर्म।',
     quickLinks: 'त्वरित लिंक',
     aboutSection: 'के बारे में',
     aboutUs: 'हमारे बारे में',
-    aboutUsMessage: 'माइंडट्रैकर दुनिया भर के शैक्षणिक संस्थानों में माइंडफुलनेस और कल्याण लाने के लिए समर्पित है।',
+    aboutUsMessage: 'कल्याण और माइंडफुलनेस को बढ़ावा देने के लिए समर्पित एक प्लेटफॉर्म।',
     privacyPolicy: 'गोपनीयता नीति',
     privacyPolicyMessage: 'हमारी गोपनीयता नीति सुनिश्चित करती है कि आपका डेटा सुरक्षित और संरक्षित है।',
     termsOfService: 'सेवा की शर्तें',
@@ -908,7 +908,8 @@ export const translations = {
     home: 'முகப்பு',
     login: 'உள்நுழைய',
     logout: 'வெளியேறு',
-    signup: 'பதிவு செய்ய',
+    signIn: 'உள்நுழைய',
+    signUp: 'பதிவு செய்ய',
     settings: 'அமைப்புகள்',
     profile: 'சுயவிவரம்',
     back: 'பின்செல்',
@@ -923,6 +924,28 @@ export const translations = {
     success: 'வெற்றி',
     welcome: 'வரவேற்கிறோம்',
     continue: 'தொடர்க',
+
+    // Auth
+    email: 'மின்னஞ்சல்',
+    password: 'கடவுச்சொல்',
+    welcomeBack: 'மீண்டும் வரவேற்கிறோம்',
+    invalidCredentials: 'சரியான சான்றுகளை உள்ளீடு செய்யவும்',
+    noAccount: 'கணக்கு இல்லையா?',
+    demoCredentialsTitle: 'டெமோ சான்றுகள்:',
+    studentCredential: 'மாணவர்:',
+    mentorCredential: 'வழிகாட்டி:',
+    adminCredential: 'நிர்வாகி:',
+
+    // Form validation
+    passwordsDoNotMatch: 'கடவுச்சொற்கள் பொருந்தவில்லை',
+    allFieldsRequired: 'அனைத்து புலங்களும் தேவை',
+    passwordMinLength: 'கடவுச்சொல் குறைந்தது 6 எழுத்துகள் இருக்க வேண்டும்',
+    createAccount: 'கணக்கை உருவாக்கு',
+    confirmPassword: 'கடவுச்சொல்லை உறுதிசெய்',
+    selectRole: 'பாத்திரத்தை தேர்ந்தெடு',
+    roleDescription: 'உங்களை சிறப்பாக விவரிக்கும் பாத்திரத்தை தேர்ந்தெடு',
+    ageGrade: 'வயது/தரம்',
+    ageGradePlaceholder: 'உங்கள் வயது அல்லது தரத்தை உள்ளீடு செய்யவும் (எ.கா. 16 அல்லது தரம் 11)',
 
     // Welcome Page Platform Features  
     dailyMeditationTitle: 'தினசரி தியானம்',
@@ -963,9 +986,6 @@ export const translations = {
     getStartedStudentText: 'மாணவராகத் தொடங்கவும்',
     joinAsMentorText: 'வழிகாட்டியாக சேரவும்',
     adminAccessText: 'நிறுவன நிர்வாக அணுகல்',
-    tryExercisesText: 'பயிற்சிகளை முயற்சிக்கவும்',
-    tryJournalText: 'பத்திரிகையை முயற்சிக்கவும்',
-    viewSampleReportsText: 'மாதிரி அறிக்கைகளைப் பார்க்கவும்',
     exercisesSectionDemoText: 'டெமோ: இது நினைவாற்றல் பயிற்சி பகுதியைத் திறக்கும். அனைத்து அம்சங்களுக்கும் அணுகல் பெற பதிவு செய்யுங்கள்!',
     journalSectionDemoText: 'டெமோ: இது தனிப்பட்ட பத்திரிகையைத் திறக்கும். உங்கள் நினைவாற்றல் பயணத்தைத் தொடங்க பதிவு செய்யுங்கள்!',
     reportsSectionDemoText: 'டெமோ: இது உங்கள் முன்னேற்ற அறிக்கைகளைக் காட்டும். உங்கள் நல்வாழ்வு பயணத்தைக் கண்காணிக்க பதிவு செய்யுங்கள்!',
@@ -980,7 +1000,6 @@ export const translations = {
     buildResilienceText: 'மாணவர்கள் மற்றும் ஊழியர்களிடையே மனநிலையை வளர்க்கவும்',
     fosterEnvironmentsText: 'கருணையான மற்றும் ஆதரவான கற்றல் சூழல்களை வளர்க்கவும்',
     hipaaCompliantText: 'HIPAA இணக்கம் மற்றும் தரவு பாதுகாப்பு',
-    benefitsText: 'பலன்கள்',
 
     // Navigation
     exercises: 'மனநல பயிற்சிகள்',
@@ -989,6 +1008,14 @@ export const translations = {
     notificationsTitle: 'அறிவிப்புகள்',
     growthReports: 'வளர்ச்சி அறிக்கைகள்',
     analytics: 'பகுப்பாய்வு',
+
+    // Navigation
+    exercisesTitle: 'மனநல பயிற்சிகள்',
+    journalTitle: 'நாட்குறிப்பு',
+    bookMentorTitle: 'வழிகாட்டியை பதிவுசெய்',
+    notificationsTitle: 'அறிவிப்புகள்',
+    growthReportsTitle: 'வளர்ச்சி அறிக்கைகள்',
+    analyticsTitle: 'பகுப்பாய்வு',
 
     // Auth Messages
     loginSuccess: 'வெற்றிகரமாக உள்நுழைந்தீர்கள்!',
@@ -1006,6 +1033,8 @@ export const translations = {
     darkMode: 'இருள் பயன்முறை',
     lightMode: 'ஒளி பயன்முறை',
     systemDefault: 'அமைப்பு இயல்புநிலை',
+    settingsTitle: 'அமைப்புகள்',
+    settingsSaved: 'அமைப்புகள் வெற்றிகரமாக சேமிக்கப்பட்டன!',
 
     // Profile
     editProfile: 'சுயவிவரத்தை திருத்து',

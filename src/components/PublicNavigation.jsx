@@ -31,7 +31,7 @@ const PublicNavigation = () => {
             cursor: 'pointer'
           }}
         >
-          <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>MindTrack</h3>
+          <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>Mind Track</h3>
         </button>
       </div>
 

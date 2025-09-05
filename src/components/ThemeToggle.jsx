@@ -19,7 +19,7 @@ const ThemeToggle = () => {
         padding: '0.5rem 0.75rem',
         background: 'var(--surface)',
         border: '1px solid var(--border)',
-        borderRadius: '8px',
+        borderRadius: '20px',
         color: 'var(--text-primary)',
         cursor: 'pointer',
         fontSize: '0.85rem',

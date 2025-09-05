@@ -76,7 +76,7 @@ const ContactUs = () => {
                   <span className="contact-icon">📧</span>
                   <div>
                     <h3>Email</h3>
-                    <p>hello@mindtracker.edu</p>
+                    <p>getmindtrack@gmail.com</p>
                     <small>We typically respond within 4-6 hours</small>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const ContactUs = () => {
                   <span className="contact-icon">📞</span>
                   <div>
                     <h3>Phone</h3>
-                    <p>+1 (555) 123-4567</p>
+                    <p>+91 8660121324</p>
                     <small>Mon-Fri, 9AM-6PM EST</small>
                   </div>
                 </div>
@@ -104,9 +104,9 @@ const ContactUs = () => {
                 <h3>🏢 Office Location</h3>
                 <p>
                   MindTracker Headquarters<br/>
-                  123 Wellness Street<br/>
-                  Mindfulness City, MC 12345<br/>
-                  United States
+                  252, 3rd Cross Road<br/>
+                  Bengaluru, Karnataka<br/>
+                  India
                 </p>
               </div>
             </div>

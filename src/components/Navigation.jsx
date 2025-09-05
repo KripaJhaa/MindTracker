@@ -56,7 +56,7 @@ const Navigation = ({ navigationItems = [] }) => {
             className="logo-button"
           >
             <img src={mindTrackLogo} alt="MindTrack" className="logo-image" />
-            <span className="logo-text">MindTrack</span>
+            <span className="logo-text">Mind Track</span>
           </button>
         </div>
 

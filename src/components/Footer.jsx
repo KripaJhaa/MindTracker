@@ -1,13 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { useAuth } from '../context/AuthContext';
 import './Footer.css';
 
 const Footer = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const { isAuthenticated } = useAuth();
 
   const currentYear = new Date().getFullYear();
+
+  // Don't render footer if user is logged in
+  if (isAuthenticated) {
+    return null;
+  }
 
   return (
     <footer className="footer">
@@ -51,15 +58,15 @@ const Footer = () => {
           <div className="footer-social">
             <div className="social-info">
               <span className="social-icon">📧</span>
-              <span className="social-text">hello@mindtracker.edu</span>
+              <span className="social-text">getmindtrack@gmail.com</span>
             </div>
             <div className="social-info">
               <span className="social-icon">📞</span>
-              <span className="social-text">+1 (555) 123-4567</span>
+              <span className="social-text">+91 8660121324</span>
             </div>
             <div className="social-info">
               <span className="social-icon">🌐</span>
-              <span className="social-text">mindtracker.edu</span>
+              <span className="social-text">www.mindtrack.space</span>
             </div>
           </div>
         </div>

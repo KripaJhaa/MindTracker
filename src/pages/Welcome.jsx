@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
+import TestimonialSection from '../components/TestimonialSection';
 import './Welcome.css';
 
 const Welcome = () => {
@@ -454,7 +455,8 @@ const Welcome = () => {
           {t('signUpToUnlockText')}
         </p>
       </div>
-
+      {/* Testimonials Section */}
+      <TestimonialSection />
       {/* Institutional Footer */}
       <div style={{
         textAlign: 'center',

@@ -2271,6 +2271,7 @@ code, pre {
   .modal-buttons .btn:nth-child(2) {
     order: 3;
   }
+}
 
 /* Enhanced mobile modal button fixes */
 @media (max-width: 768px) {

@@ -247,13 +247,20 @@ const Welcome = () => {
           <span style={{ fontSize: '1.5rem' }}>👥</span>
           {t('userRolesTitle')}
         </h3>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '1.5rem'
+        <div className="user-roles-container" style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'stretch',
+          gap: '1.5rem',
+          width: '100%',
+          margin: '0 auto'
         }}>
           <div className="practice-item fade-in-up" style={{
             animationDelay: '0.7s',
+            flex: '1 1 220px',
+            minWidth: '220px',
+            maxWidth: '280px',
             padding: '1.5rem',
             background: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '20px',
@@ -283,6 +290,9 @@ const Welcome = () => {
           </div>
           <div className="practice-item fade-in-up" style={{
             animationDelay: '0.8s',
+            flex: '1 1 220px',
+            minWidth: '220px',
+            maxWidth: '280px',
             padding: '1.5rem',
             background: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '20px',
@@ -312,6 +322,9 @@ const Welcome = () => {
           </div>
           <div className="practice-item fade-in-up" style={{
             animationDelay: '0.9s',
+            flex: '1 1 220px',
+            minWidth: '220px',
+            maxWidth: '280px',
             padding: '1.5rem',
             background: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '20px',

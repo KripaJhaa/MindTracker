@@ -2408,3 +2408,78 @@ code, pre {
     padding: 0.75rem 1rem;
   }
 }
+
+/* User Roles Section Styling */
+.user-roles-container {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin: 0 auto !important;
+  max-width: 1000px;
+  width: 100% !important;
+}
+
+/* Enhanced mobile responsiveness for user roles */
+@media (max-width: 768px) {
+  .user-roles-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    padding: 0 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+  
+  .user-roles-container .practice-item {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    flex: none !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-roles-container {
+    gap: 0.75rem !important;
+    padding: 0 1rem !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
+  .user-roles-container .practice-item {
+    max-width: 90% !important;
+    padding: 1.25rem !important;
+    margin: 0 auto !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+  }
+}
+
+/* Blob animations for testimonial section */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}

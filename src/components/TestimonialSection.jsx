@@ -13,7 +13,7 @@ const TestimonialSection = () => {
   
   const testimonials = [
     {
-      institution: "Harvard University",
+      institution: "Sharda University, Noida India",
       logo: "🎓",
       quote: "MindTracker delivered exceptional ROI within 6 months. We saw a 25% reduction in counseling center wait times, 40% increase in early intervention cases, and 15% improvement in student retention rates.",
       author: "Dr. Sarah Chen",
@@ -23,7 +23,7 @@ const TestimonialSection = () => {
       rating: 5
     },
     {
-      institution: "Stanford University",
+      institution: "Indian Institute of Technology, Kalinga India",
       logo: "🏛️",
       quote: "The institutional dashboard revolutionized our approach to student mental health. 60% reduction in crisis interventions and 35% decrease in academic leaves due to mental health issues.",
       author: "Prof. Michael Rodriguez",
@@ -107,24 +107,6 @@ const TestimonialSection = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes blob {
-          0% { transform: translate(0px, 0px) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
-          100% { transform: translate(0px, 0px) scale(1); }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
     </section>
   );
 };

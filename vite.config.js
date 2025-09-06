@@ -34,7 +34,6 @@ export default defineConfig({
     cssCodeSplit: true,
     reportCompressedSize: false
   },
-  base: './',
   server: {
     port: 5173,
     host: true

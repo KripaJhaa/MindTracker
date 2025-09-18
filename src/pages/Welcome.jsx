@@ -1,4 +1,57 @@
 import React, { useEffect } from 'react';
+// Standalone Offerings component
+const OfferingsSection = ({ navigate }) => (
+  <div style={{
+    margin: '3rem auto',
+    padding: '2.5rem 1.5rem',
+    background: 'linear-gradient(135deg, #f3e8ff 0%, #eff6ff 100%)',
+    borderRadius: '2rem',
+    boxShadow: '0 8px 32px rgba(80, 80, 160, 0.08)',
+    maxWidth: '900px',
+    textAlign: 'center',
+    border: '1px solid #e5e7eb',
+    position: 'relative',
+    zIndex: 2
+  }}>
+    <h2 style={{
+      fontSize: '2rem',
+      fontWeight: 700,
+      marginBottom: '2rem',
+      background: 'linear-gradient(to right, #2563eb, #9333ea)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      letterSpacing: '1px'
+    }}>
+      Discover Mindtrack Offerings
+    </h2>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
+      <div style={{ textAlign: 'center', maxWidth: '22rem', background: 'white', borderRadius: '1rem', boxShadow: '0 2px 8px rgba(80,80,160,0.06)', padding: '2rem 1rem', border: '1px solid #e5e7eb' }}>
+        <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.5rem', color: '#2563eb' }}>For Schools</p>
+        <p style={{ fontSize: '0.95rem', color: '#374151', marginBottom: '1rem' }}>
+          Empower students with daily mood tracking, mindfulness exercises, and journaling. Mindtrack for Schools helps build emotional resilience and wellbeing in K-12 and university settings.
+        </p>
+        <button
+          style={{ padding: '0.75rem 2rem', borderRadius: '0.75rem', background: 'linear-gradient(to right, #2563eb, #9333ea)', color: 'white', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', boxShadow: '0 2px 8px rgba(80,80,160,0.10)' }}
+          onClick={() => navigate('/schools')}
+        >
+          Explore Schools Offering
+        </button>
+      </div>
+      <div style={{ textAlign: 'center', maxWidth: '22rem', background: 'white', borderRadius: '1rem', boxShadow: '0 2px 8px rgba(80,80,160,0.06)', padding: '2rem 1rem', border: '1px solid #e5e7eb' }}>
+        <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.5rem', color: '#334155' }}>For Enterprise</p>
+        <p style={{ fontSize: '0.95rem', color: '#374151', marginBottom: '1rem' }}>
+          Transform workplace culture with Mindtrack for Enterprise. Boost employee wellbeing, reduce burnout, and foster a resilient, productive organization with science-backed mental wellness tools.
+        </p>
+        <button
+          style={{ padding: '0.75rem 2rem', borderRadius: '0.75rem', background: 'linear-gradient(to right, #334155, #2563eb)', color: 'white', fontWeight: 600, border: 'none', cursor: 'pointer', fontSize: '1rem', boxShadow: '0 2px 8px rgba(80,80,160,0.10)' }}
+          onClick={() => navigate('/enterprise')}
+        >
+          Explore Enterprise Offering
+        </button>
+      </div>
+    </div>
+  </div>
+);
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
@@ -477,6 +530,9 @@ const Welcome = () => {
         fontSize: '0.9rem',
         marginTop: '4rem'
       }}>
+                {/* Offerings Section */}
+        <OfferingsSection navigate={navigate} />
+        
         <p style={{ margin: 0 }}>
           🏫 {t('supportingWellnessWorldwideText')}
         </p>

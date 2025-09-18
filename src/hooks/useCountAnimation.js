@@ -21,7 +21,7 @@ const useCountAnimation = (endValue, duration = 2000, startOnView = true) => {
     }
     // Handle percentage values
     if (typeof endValue === 'number' && endValue <= 100) {
-      return `${Math.floor(value)}%`;
+      return `${Math.floor(value)}`;
     }
     // Handle decimal values
     if (typeof endValue === 'number' && endValue < 10) {

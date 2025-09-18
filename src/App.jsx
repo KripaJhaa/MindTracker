@@ -31,6 +31,10 @@ import HelpCenter from './pages/HelpCenter';
 import FAQ from './pages/FAQ';
 import Accessibility from './pages/Accessibility';
 
+// B2B Pages
+import Schools from './pages/Schools';
+import Enterprise from './pages/Enterprise';
+
 function App() {
   const { isAuthenticated } = useAuth();
 
@@ -57,6 +61,10 @@ function App() {
               <Route path="/welcome" element={<Welcome />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              
+              {/* B2B Pages - Public */}
+              <Route path="/schools" element={<Schools />} />
+              <Route path="/enterprise" element={<Enterprise />} />
               
               {/* Footer Pages - Public */}
               <Route path="/about-us" element={<AboutUs />} />

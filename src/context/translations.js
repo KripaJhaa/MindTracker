@@ -1,3 +1,66 @@
+// Enterprise Page Translations
+export const enterpriseTranslations = {
+  en: {
+    badge: 'Enterprise & Organizations',
+    heroTitle: 'Build Workplace Mental Fitness',
+    heroSubtitle: 'with Mindtrack',
+    heroDesc: 'Transform your workplace culture with employee mental wellness tools designed to build resilience, reduce burnout, and create healthier emotional habits across your organization.',
+    requestDemo: 'Request Demo',
+    startTrial: 'Start Trial',
+    trust: 'Trusted by forward-thinking companies',
+    ctaTitle: 'Ready to Transform Your Workplace?',
+    ctaSubtitle: 'Join innovative companies building resilient, engaged teams with Mindtrack\'s comprehensive workplace mental fitness platform.',
+    ctaDemo: '📊 Request Custom Demo',
+    ctaTrial: '🚀 Start Enterprise Trial',
+    ctaNote: 'No setup fees • 30-day trial • SOC 2 compliant • Dedicated support',
+  },
+  hi: {
+    badge: 'एंटरप्राइज और संगठन',
+    heroTitle: 'कार्यस्थल मानसिक फिटनेस बनाएं',
+    heroSubtitle: 'माइंडट्रैक के साथ',
+    heroDesc: 'अपने कार्यस्थल की संस्कृति को कर्मचारी मानसिक स्वास्थ्य उपकरणों के साथ बदलें, जो लचीलापन बनाने, बर्नआउट कम करने और आपके संगठन में स्वस्थ भावनात्मक आदतें बनाने के लिए डिज़ाइन किए गए हैं।',
+    requestDemo: 'डेमो अनुरोध करें',
+    startTrial: 'ट्रायल शुरू करें',
+    trust: 'आधुनिक कंपनियों द्वारा विश्वसनीय',
+    ctaTitle: 'क्या आप अपने कार्यस्थल को बदलने के लिए तैयार हैं?',
+    ctaSubtitle: 'माइंडट्रैक के व्यापक प्लेटफॉर्म के साथ लचीले, प्रेरित टीमों का निर्माण करें।',
+    ctaDemo: '📊 कस्टम डेमो अनुरोध करें',
+    ctaTrial: '🚀 एंटरप्राइज ट्रायल शुरू करें',
+    ctaNote: 'कोई सेटअप शुल्क नहीं • 30-दिन ट्रायल • SOC 2 अनुरूप • समर्पित समर्थन',
+  },
+};
+
+// Schools Page Translations
+export const schoolsTranslations = {
+  en: {
+    badge: 'K-12 Schools & Universities',
+    heroTitle: 'Build Student Emotional Resilience',
+    heroSubtitle: 'with Mindtrack',
+    heroDesc: 'Empower your students to develop healthy emotional habits through daily mood tracking, mindful breathing, and personalized journaling designed specifically for young people.',
+    scheduleDemo: '🚀 Schedule Demo',
+    startTrial: '✨ Start Free Trial',
+    trust: 'Trusted by leading educational institutions',
+    ctaTitle: 'Ready to Transform Student Wellbeing?',
+    ctaSubtitle: 'Join thousands of educators who are building emotional resilience in their students with Mindtrack\'s comprehensive mental fitness platform.',
+    ctaDemo: '📅 Schedule Demo',
+    ctaTrial: '🚀 Start Free Trial',
+    ctaNote: 'No credit card required • 30-day free trial • FERPA compliant',
+  },
+  hi: {
+    badge: 'स्कूल और विश्वविद्यालय',
+    heroTitle: 'छात्रों की भावनात्मक दृढ़ता बनाएं',
+    heroSubtitle: 'माइंडट्रैक के साथ',
+    heroDesc: 'अपने छात्रों को स्वस्थ भावनात्मक आदतें विकसित करने के लिए सशक्त बनाएं, दैनिक मूड ट्रैकिंग, माइंडफुल ब्रीदिंग और व्यक्तिगत जर्नलिंग के माध्यम से, विशेष रूप से युवाओं के लिए डिज़ाइन किया गया।',
+    scheduleDemo: '🚀 डेमो शेड्यूल करें',
+    startTrial: '✨ फ्री ट्रायल शुरू करें',
+    trust: 'प्रमुख शैक्षिक संस्थानों द्वारा विश्वसनीय',
+    ctaTitle: 'क्या आप छात्रों की भलाई बदलने के लिए तैयार हैं?',
+    ctaSubtitle: 'माइंडट्रैक के व्यापक प्लेटफॉर्म के साथ हजारों शिक्षक छात्रों में भावनात्मक दृढ़ता बना रहे हैं।',
+    ctaDemo: '📅 डेमो शेड्यूल करें',
+    ctaTrial: '🚀 फ्री ट्रायल शुरू करें',
+    ctaNote: 'कोई क्रेडिट कार्ड आवश्यक नहीं • 30-दिन फ्री ट्रायल • FERPA अनुरूप',
+  },
+};
 export const translations = {
   english: {
     // Languages

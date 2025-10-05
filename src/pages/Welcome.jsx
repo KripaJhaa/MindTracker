@@ -247,7 +247,7 @@ const Welcome = () => {
           ))}
         </div>
       </div>
-
+      <OfferingsSection navigate={navigate} />
       {/* Platform Features Overview */}
       <div className="meditation-card fade-in-up" style={{ animationDelay: '0.4s', marginBottom: '3rem' }}>
         <h3 style={{
@@ -530,8 +530,6 @@ const Welcome = () => {
         fontSize: '0.9rem',
         marginTop: '4rem'
       }}>
-                {/* Offerings Section */}
-        <OfferingsSection navigate={navigate} />
         
         <p style={{ margin: 0 }}>
           🏫 {t('supportingWellnessWorldwideText')}

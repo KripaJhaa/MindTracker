@@ -45,26 +45,17 @@ const Enterprise = () => {
       animation: 'pulse 6s infinite ease-in-out',
     }),
     container: {
-      maxWidth: '56rem',
+      maxWidth: '80rem',
       margin: '0 auto',
       padding: '0 1rem',
       zIndex: 10,
-      display: 'flex',
-      alignItems: 'center',
     },
     grid: {
       gap: '3rem',
       alignItems: 'center',
-      justifyContent: 'center',
     },
     heroTextContainer: {
       textAlign: 'center',
-      justifyContent: 'center',
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      width: '100%',
-      margin: '0 auto',
     },
     badge: {
       display: 'inline-flex',
@@ -83,11 +74,6 @@ const Enterprise = () => {
       fontWeight: '700',
       marginBottom: '1.5rem',
       lineHeight: 1.2,
-      textAlign: 'center',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      width: '100%',
-      maxWidth: '100%',
     },
     gradientText: {
       background: 'linear-gradient(to right, #334155, #2563eb, #4f46e5)',
@@ -121,8 +107,6 @@ const Enterprise = () => {
       background: isPrimary ? 'linear-gradient(to right, #334155, #2563eb)' : 'transparent',
       color: isPrimary ? 'white' : '#2563eb',
       cursor: 'pointer',
-      maxWidth: '18rem',
-      width: '100%',
     }),
     trustIndicator: {
       marginTop: '3rem',
@@ -165,21 +149,12 @@ const Enterprise = () => {
       padding: '5rem 0',
       background: 'linear-gradient(to right, #334155, #2563eb, #4f46e5)',
       textAlign: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
     },
     ctaTitle: {
       fontSize: 'clamp(1.875rem, 5vw, 3rem)',
       fontWeight: '700',
       color: 'white',
       marginBottom: '1.5rem',
-      textAlign: 'center',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      width: '100%',
-      maxWidth: '100%',
     },
     ctaSubtitle: {
       fontSize: '1.25rem',
@@ -199,8 +174,6 @@ const Enterprise = () => {
       background: isPrimary ? 'white' : 'transparent',
       color: isPrimary ? '#2563eb' : 'white',
       cursor: 'pointer',
-      maxWidth: '18rem',
-      width: '100%',
     }),
   };
 
@@ -217,8 +190,8 @@ const Enterprise = () => {
           }
           @media (min-width: 1024px) {
             .lg-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .lg-text-left { text-align: center !important; }
-            .lg-justify-start { justify-content: center !important; }
+            .lg-text-left { text-align: left; }
+            .lg-justify-start { justify-content: flex-start; }
           }
         `}
       </style>

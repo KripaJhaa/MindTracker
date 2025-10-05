@@ -62,14 +62,11 @@ const Schools = () => {
       animation: 'pulse 4s infinite 1s',
     },
     container: {
-      maxWidth: '56rem',
+      maxWidth: '72rem',
       marginLeft: 'auto',
       marginRight: 'auto',
       padding: '0 1rem',
       zIndex: 10,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
     },
     grid: {
       display: 'grid',
@@ -81,24 +78,10 @@ const Schools = () => {
         gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
       },
       alignItems: 'center',
-        grid: {
-          display: 'grid',
-          gap: '3rem',
-          alignItems: 'center',
-          justifyContent: 'center',
-        },
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-        },
-        heroText: {
-          textAlign: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          width: '100%',
-        },
+    },
+    heroText: {
+      textAlign: 'center',
+    },
     badge: {
       display: 'inline-flex',
       alignItems: 'center',
@@ -149,8 +132,6 @@ const Schools = () => {
       boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       border: 'none',
       cursor: 'pointer',
-      maxWidth: '18rem',
-      width: '100%',
     },
     secondaryButton: {
       display: 'inline-flex',
@@ -163,8 +144,6 @@ const Schools = () => {
       transition: 'all 0.3s',
       background: 'transparent',
       cursor: 'pointer',
-      maxWidth: '18rem',
-      width: '100%',
     },
     trustIndicator: {
       marginTop: '3rem',

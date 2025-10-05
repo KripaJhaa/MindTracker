@@ -31,11 +31,16 @@
     <meta property="twitter:image:alt" content="MindTracker Platform Interface" />
     
     <!-- Favicons and App Icons -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-32x32.svg" />
-    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Updated Favicons in SVG Format -->
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-32x32.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="192x192" href="/favicon-192x192.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="512x512" href="/favicon-512x512.svg" />
     
     <!-- Additional SEO Meta -->
     <meta name="theme-color" content="#6366f1" />
@@ -79,9 +84,56 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MindTracker",
+        "url": "https://mindtracker.vercel.app/",
+        "logo": "https://mindtracker.vercel.app/vite.svg",
+        "description": "Comprehensive mindfulness and wellness tracking platform designed for educational institutions. Features meditation exercises, journaling, mentor sessions, and analytics to support student mental health and wellbeing.",
+        "sameAs": [
+          "https://www.facebook.com/MindTracker",
+          "https://twitter.com/MindTracker",
+          "https://www.linkedin.com/company/mindtracker"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID'); 
+      fbq('track', 'PageView');
+    </script>
+    <!-- Facebook Pixel noscript -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'YOUR_GA_ID');
+    </script>
+
+    <!-- Footer with LinkedIn Link -->
+    <footer>
+      <p>Connect with us on <a href="https://www.linkedin.com/company/mind-track" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+    </footer>
   </body>
 </html>

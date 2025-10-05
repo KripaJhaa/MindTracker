@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
+import mindTrackLogo from '../assets/mind-track-logo.png';
 
 const PublicNavigation = () => {
   const navigate = useNavigate();
@@ -31,7 +32,8 @@ const PublicNavigation = () => {
             cursor: 'pointer'
           }}
         >
-          <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>Mind Track</h3>
+          <img src={mindTrackLogo} alt="MindTrack" className="logo-image" />
+          <h3 style={{ margin: 0, color: 'var(--primary-color)' }}>Mind  Track</h3>
         </button>
       </div>
 

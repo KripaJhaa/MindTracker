@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
-import mindTrackLogo from '../assets/mindtrack-icon.svg';
+import mindTrackLogo from '../assets/mind-track-logo.png';
 import './Navigation.css';
 
 const Navigation = ({ navigationItems = [] }) => {

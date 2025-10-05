@@ -18,9 +18,8 @@ Disallow: /src/
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /dist/
-Disallow: *.map
 
-# Sitemap location
+# Added sitemap for better crawling
 Sitemap: https://mindtracker.vercel.app/sitemap.xml
 
 # Crawl-delay for better server performance
